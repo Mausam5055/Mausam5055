@@ -3,13 +3,12 @@
 Welcome to my GitHub profile! I'm passionate about coding, technology, and continuous learning. Below you'll find some information about me, my projects, and how to get in touch.
 
 ## 🚀 About Me
-- 🔭 I’m currently working on [Your Current Project]
-- 🌱 I’m currently learning [Your Current Learning Interest]
-- 👯 I’m looking to collaborate on [Collaboration Interests]
-- 🤔 I’m looking for help with [Any Help Needed]
-- 💬 Ask me about [Topics You Are Knowledgeable About]
-- 📫 How to reach me: [Your Contact Information]
-- ⚡ Fun fact: [A Fun Fact About You]
+- 🔭 I’m currently working on [Full Stack Development]
+- 🌱 I’m currently learning [DevOps]
+- 👯 I’m looking to collaborate on [New Projects]
+- 💬 Ask me about [Web Development]
+- 📫 How to reach me: [rikikumkar@gmail.com]
+- ⚡ Fun fact: [Gaming + coding]
 
 ## 🛠️ Technologies & Tools
 - Programming Languages: [List of Programming Languages]
@@ -23,6 +22,6 @@ Welcome to my GitHub profile! I'm passionate about coding, technology, and conti
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Mausam5055&theme=radical)
 
 ## 📫 Connect with Me
-- [LinkedIn](Your LinkedIn Profile URL)
-- [Twitter](Your Twitter Profile URL)
-- [Personal Website/Blog](Your Website/Blog URL)
+- [LinkedIn]https:(//www.linkedin.com/in/mausam-kar-6388861a7/)
+- [Twitter](comming Soon)
+- [Personal Website/Blog](https://my-portfolio-v-03.vercel.app/)
