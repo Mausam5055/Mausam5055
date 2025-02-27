@@ -1,4 +1,4 @@
-# Hi there, I'm Mausam5055 👋
+# Hi there, I'm Mausam Kar 👋
 
 Welcome to my GitHub profile! I'm passionate about coding, technology, and continuous learning. Below you'll find some information about me, my projects, and how to get in touch.
 
