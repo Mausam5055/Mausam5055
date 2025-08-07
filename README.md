@@ -11,8 +11,9 @@
 - 👀 I’m interested in Software Development, AI/ML, and Full-Stack Development
 - 🌱 I’m currently learning advanced programming concepts and exploring new technologies
 - 💞️ I’m looking to collaborate on open-source projects and innovative solutions
-- 📫 How to reach me: Check my LinkedIn and GitHub below
+- 📫 How to reach me: rikikumkar@gmail.com
 - 🧑‍💻 LinkedIn: https://www.linkedin.com/in/mausam-kar-6388861a7/
+- 🌍 Portfolio: https://mausam03.vercel.app/
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: Always exploring new technologies and building cool projects!
 
