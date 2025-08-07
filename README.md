@@ -7,15 +7,44 @@
 <br>
 <p></p>
 
-- 👋 Hi, I’m Mausam Kar @Mausam5055
-- 👀 I’m interested in Software Development, AI/ML, and Full-Stack Development
-- 🌱 I’m currently learning advanced programming concepts and exploring new technologies
-- 💞️ I’m looking to collaborate on open-source projects and innovative solutions
-- 📫 How to reach me: rikikumkar@gmail.com
-- 🧑‍💻 LinkedIn: https://www.linkedin.com/in/mausam-kar-6388861a7/
-- 🌍 Portfolio: https://mausam03.vercel.app/
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: Always exploring new technologies and building cool projects!
+### 🎯 **About Me**
+
+<div align="center">
+
+### 👋 **Hello World! I'm Mausam Kar**  
+<span style="font-size: 1.2em; font-weight: bold; color: #58a6ff;">@Mausam5055</span>
+
+<br>
+
+### 🚀 **What I Do**
+<div align="left" style="font-size: 1.1em; line-height: 1.8;">
+  
+| **Category** | **Details** |
+|--------------|-------------|
+| **🎯 Interests** | Software Development • AI/ML • Full-Stack Development |
+| **📚 Learning** | Advanced Programming • Emerging Technologies • Cloud Computing |
+| **🤝 Collaboration** | Open-Source Projects • Innovative Solutions • Tech Communities |
+| **📧 Contact** | 📧 [rikikumkar@gmail.com](mailto:rikikumkar@gmail.com) |
+| **🔗 LinkedIn** | [mausam-kar](https://www.linkedin.com/in/mausam-kar-6388861a7/) |
+| **🌍 Portfolio** | [mausam03.vercel.app](https://mausam03.vercel.app/) |
+| **🏷️ Pronouns** | He/Him |
+| **⚡ Fun Fact** | Always exploring new technologies and building cool projects! |
+
+</div>
+
+<br>
+
+### 🎨 **Connect With Me**
+<div align="center">
+  
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mausam-kar-6388861a7/)
+[![Portfolio Badge](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://mausam03.vercel.app/)
+[![Email Badge](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rikikumkar@gmail.com)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mausam5055)
+
+</div>
+
+</div>
 
 </br>
 
