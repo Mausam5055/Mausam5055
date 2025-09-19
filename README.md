@@ -17,13 +17,10 @@
 <br>
 
 ### 🚀 **What I Do**
-</div>
-
-<div style="font-size: 1.1em; line-height: 1.8; overflow-x: auto; margin: 0 auto; max-width: 100%; width: 100%;">
-<div align="center">
+<div align="left" style="font-size: 1.1em; line-height: 1.8;">
   
 | **Category** | **Details** |
-|:------------:|:-----------:|
+|--------------|-------------|
 | **🎯 Interests** | Software Development • AI/ML • Full-Stack Development |
 | **📚 Learning** | Advanced Programming • Emerging Technologies • Cloud Computing |
 | **🤝 Collaboration** | Open-Source Projects • Innovative Solutions • Tech Communities |
@@ -33,7 +30,6 @@
 | **🏷️ Pronouns** | He/Him |
 | **⚡ Fun Fact** | Always exploring new technologies and building cool projects! |
 
-</div>
 </div>
 
 <br>
