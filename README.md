@@ -14,29 +14,21 @@
 ### 👋 **Hello World! I'm Mausam Kar**  
 <span style="font-size: 1.2em; font-weight: bold; color: #58a6ff;">@Mausam5055</span>
 
-</div>
-
 <br>
 
 ### 🚀 **What I Do**
-
-<div style="font-size: 1.1em; line-height: 1.6; max-width: 100%;">
-
-**🎯 Interests:** Software Development • AI/ML • Full-Stack Development
-
-**📚 Learning:** Advanced Programming • Emerging Technologies • Cloud Computing
-
-**🤝 Collaboration:** Open-Source Projects • Innovative Solutions • Tech Communities
-
-**📧 Contact:** 📧 [rikikumkar@gmail.com](mailto:rikikumkar@gmail.com)
-
-**🔗 LinkedIn:** [mausam-kar](https://www.linkedin.com/in/mausam-kar-6388861a7/)
-
-**🌍 Portfolio:** [mausam03.vercel.app](https://mausam03.vercel.app/)
-
-**🏷️ Pronouns:** He/Him
-
-**⚡ Fun Fact:** Always exploring new technologies and building cool projects!
+<div align="left" style="font-size: 1.1em; line-height: 1.8;">
+  
+| **Category** | **Details** |
+|--------------|-------------|
+| **🎯 Interests** | Software Development • AI/ML • Full-Stack Development |
+| **📚 Learning** | Advanced Programming • Emerging Technologies • Cloud Computing |
+| **🤝 Collaboration** | Open-Source Projects • Innovative Solutions • Tech Communities |
+| **📧 Contact** | 📧 [rikikumkar@gmail.com](mailto:rikikumkar@gmail.com) |
+| **🔗 LinkedIn** | [mausam-kar](https://www.linkedin.com/in/mausam-kar-6388861a7/) |
+| **🌍 Portfolio** | [mausam03.vercel.app](https://mausam03.vercel.app/) |
+| **🏷️ Pronouns** | He/Him |
+| **⚡ Fun Fact** | Always exploring new technologies and building cool projects! |
 
 </div>
 
