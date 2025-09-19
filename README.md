@@ -17,7 +17,9 @@
 <br>
 
 ### 🚀 **What I Do**
-<div align="left" style="font-size: 1.1em; line-height: 1.8;">
+</div>
+
+<div align="left" style="font-size: 1.1em; line-height: 1.8; overflow-x: auto;">
   
 | **Category** | **Details** |
 |--------------|-------------|
