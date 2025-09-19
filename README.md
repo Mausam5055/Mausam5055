@@ -9,20 +9,21 @@
 
 ### 🎯 **About Me**
 
-<div align="center">
-
-### 👋 **Hello World! I'm Mausam Kar**  
-<span style="font-size: 1.2em; font-weight: bold; color: #58a6ff;">@Mausam5055</span>
+<p align="center">
+  <h3 align="center">👋 Hello World! I'm Mausam Kar</h3>
+  <p align="center">
+    <span style="font-size: 1.2em; font-weight: bold; color: #58a6ff;">@Mausam5055</span>
+  </p>
+</p>
 
 <br>
 
 ### 🚀 **What I Do**
-</div>
 
-<div align="left" style="font-size: 1.1em; line-height: 1.8; overflow-x: auto;">
+<div style="font-size: 1.1em; line-height: 1.8; max-width: 100%; overflow-x: auto;">
   
 | **Category** | **Details** |
-|--------------|-------------|
+|:------------:|:-----------:|
 | **🎯 Interests** | Software Development • AI/ML • Full-Stack Development |
 | **📚 Learning** | Advanced Programming • Emerging Technologies • Cloud Computing |
 | **🤝 Collaboration** | Open-Source Projects • Innovative Solutions • Tech Communities |
