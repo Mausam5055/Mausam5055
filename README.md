@@ -19,7 +19,8 @@
 ### 🚀 **What I Do**
 </div>
 
-<div align="center" style="font-size: 1.1em; line-height: 1.8; overflow-x: auto;">
+<div style="font-size: 1.1em; line-height: 1.8; overflow-x: auto; margin: 0 auto; max-width: 100%;">
+<div align="center">
   
 | **Category** | **Details** |
 |--------------|-------------|
@@ -32,6 +33,7 @@
 | **🏷️ Pronouns** | He/Him |
 | **⚡ Fun Fact** | Always exploring new technologies and building cool projects! |
 
+</div>
 </div>
 
 <br>
