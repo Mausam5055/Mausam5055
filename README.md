@@ -19,11 +19,11 @@
 ### 🚀 **What I Do**
 </div>
 
-<div style="font-size: 1.1em; line-height: 1.8; overflow-x: auto; margin: 0 auto; max-width: 100%;">
+<div style="font-size: 1.1em; line-height: 1.8; overflow-x: auto; margin: 0 auto; max-width: 100%; width: 100%;">
 <div align="center">
   
 | **Category** | **Details** |
-|--------------|-------------|
+|:------------:|:-----------:|
 | **🎯 Interests** | Software Development • AI/ML • Full-Stack Development |
 | **📚 Learning** | Advanced Programming • Emerging Technologies • Cloud Computing |
 | **🤝 Collaboration** | Open-Source Projects • Innovative Solutions • Tech Communities |
