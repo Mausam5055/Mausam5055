@@ -78,11 +78,7 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Mausam5055&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/mausam-kar-6388861a7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mausam-kar" height="30" width="40" /></a>
-<a href="https://github.com/Mausam5055" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="mausam5055" height="30" width="40" /></a>
-</p>
+
 
 
 
@@ -90,8 +86,7 @@
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Mausam5055&limit=5&theme=aura&combine_all_yearly_contributions=true)
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mausam-kar-6388861a7/) [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/Mausam5055) [![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://mausam03.vercel.app/) [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:rikikumkar@gmail.com)
+
 
 
 
