@@ -86,8 +86,7 @@
 
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
 
-# 📈 LeetCode Stats :
-![LeetCode Stats](https://leetcard.jacoblin.cool/Mausam5055?theme=dark&font=Abel&ext=heatmap)
+
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark) 
