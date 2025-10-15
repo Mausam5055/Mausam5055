@@ -1,12 +1,23 @@
 <!-- Divider Line -->
 <img alt="Divider" width="100%" height="5px" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExam9mYTl0eWJncWs4Nmszb3BwMjQ5bXJxZnYwNGxhY3RybHdtemZrYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3otO6NFBIAFg2vPZuM/giphy.gif">
+Show Image
 <br>
-<div align="center">
 🎯 About Me
+<table>
+<tr>
+<td width="55%" valign="middle">
+<div align="center">
 👋 Hello World! I'm Mausam Kar
 @Mausam5055
-<br>
-<img alt="Coding" width="300px" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Ftbzl1dnN1YXZjNDU5M2JvbmhjeXVncGZjcGNpdG9tY2xjNXVzNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif">
+</div>
+</td>
+<td width="45%" valign="middle">
+<div align="center">
+  <img alt="Coding" width="100%" max-width="300px" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Ftbzl1dnN1YXZjNDU5M2JvbmhjeXVncGZjcGNpdG9tY2xjNXVzNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif">
+</div>
+</td>
+</tr>
+</table>
 </div>
 
 
