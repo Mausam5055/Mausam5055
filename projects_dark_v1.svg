@@ -24,25 +24,25 @@ text, tspan {white-space: pre;}
 <tspan x="20" y="148" class="cc">.    </tspan><tspan class="value">programming, recursion, backtracking, binary search, sliding window,</tspan>
 <tspan x="20" y="170" class="cc">.    </tspan><tspan class="value">two pointers) to help with coding interview preparation and</tspan>
 <tspan x="20" y="192" class="cc">.    </tspan><tspan class="value">competitive programming.</tspan>
-<tspan x="20" y="214" class="cc">.    </tspan><tspan class="key">🌟 4 Stars  |  🍴 0 Forks  |  📏 971KB  |  💻 Java</tspan>
-<tspan x="20" y="244" class="cc">. </tspan><tspan class="add">📦 Campus-Sync</tspan>
-<tspan x="20" y="266" class="cc">.    </tspan><tspan class="value">Comprehensive campus management platform developed for Project</tspan>
-<tspan x="20" y="288" class="cc">.    </tspan><tspan class="value">Exhibition 2025. Features student information management, event</tspan>
-<tspan x="20" y="310" class="cc">.    </tspan><tspan class="value">scheduling, attendance tracking, resource booking, and real-time</tspan>
-<tspan x="20" y="332" class="cc">.    </tspan><tspan class="value">notifications to streamline campus operations and enhance student</tspan>
-<tspan x="20" y="354" class="cc">.    </tspan><tspan class="value">experience.</tspan>
-<tspan x="20" y="376" class="cc">.    </tspan><tspan class="key">🌟 0 Stars  |  🍴 0 Forks  |  📏 9.5MB  |  💻 TypeScript</tspan>
-<tspan x="20" y="406" class="cc">. </tspan><tspan class="add">📦 Mausam04</tspan>
-<tspan x="20" y="428" class="cc">.    </tspan><tspan class="value">Fourth iteration of my personal portfolio website showcasing projects,</tspan>
-<tspan x="20" y="450" class="cc">.    </tspan><tspan class="value">skills, and professional experience. Built with modern React framework</tspan>
-<tspan x="20" y="472" class="cc">.    </tspan><tspan class="value">featuring smooth GSAP animations, responsive design, dark mode</tspan>
-<tspan x="20" y="494" class="cc">.    </tspan><tspan class="value">support, and SEO optimization to create an impressive online presence.</tspan>
-<tspan x="20" y="516" class="cc">.    </tspan><tspan class="key">🌟 0 Stars  |  🍴 1 Forks  |  📏 80.2MB  |  💻 TypeScript</tspan>
-<tspan x="20" y="546" class="cc">. </tspan><tspan class="add">📦 SkillSync</tspan>
-<tspan x="20" y="568" class="cc">.    </tspan><tspan class="value">SkillSync – A student skill exchange platform that connects learners,</tspan>
-<tspan x="20" y="590" class="cc">.    </tspan><tspan class="value">mentors, and collaborators to share knowledge, develop skills, and</tspan>
-<tspan x="20" y="612" class="cc">.    </tspan><tspan class="value">grow together.</tspan>
-<tspan x="20" y="634" class="cc">.    </tspan><tspan class="key">🌟 1 Stars  |  🍴 0 Forks  |  📏 25.4MB  |  💻 HTML</tspan>
+<tspan x="20" y="214" class="cc">.    </tspan><tspan class="key">💻 908 Commits  |  📝 13,291 LOC  |  🚀 Java</tspan>
+<tspan x="20" y="244" class="cc">. </tspan><tspan class="add">📦 Mausam04</tspan>
+<tspan x="20" y="266" class="cc">.    </tspan><tspan class="value">Fourth iteration of my personal portfolio website showcasing projects,</tspan>
+<tspan x="20" y="288" class="cc">.    </tspan><tspan class="value">skills, and professional experience. Built with modern React framework</tspan>
+<tspan x="20" y="310" class="cc">.    </tspan><tspan class="value">featuring smooth GSAP animations, responsive design, dark mode</tspan>
+<tspan x="20" y="332" class="cc">.    </tspan><tspan class="value">support, and SEO optimization to create an impressive online presence.</tspan>
+<tspan x="20" y="354" class="cc">.    </tspan><tspan class="key">💻 87 Commits  |  📝 24,034 LOC  |  🚀 TypeScript</tspan>
+<tspan x="20" y="384" class="cc">. </tspan><tspan class="add">📦 Campus-Sync</tspan>
+<tspan x="20" y="406" class="cc">.    </tspan><tspan class="value">Comprehensive campus management platform developed for Project</tspan>
+<tspan x="20" y="428" class="cc">.    </tspan><tspan class="value">Exhibition 2025. Features student information management, event</tspan>
+<tspan x="20" y="450" class="cc">.    </tspan><tspan class="value">scheduling, attendance tracking, resource booking, and real-time</tspan>
+<tspan x="20" y="472" class="cc">.    </tspan><tspan class="value">notifications to streamline campus operations and enhance student</tspan>
+<tspan x="20" y="494" class="cc">.    </tspan><tspan class="value">experience.</tspan>
+<tspan x="20" y="516" class="cc">.    </tspan><tspan class="key">💻 51 Commits  |  📝 73,567 LOC  |  🚀 TypeScript</tspan>
+<tspan x="20" y="546" class="cc">. </tspan><tspan class="add">📦 NexPulse</tspan>
+<tspan x="20" y="568" class="cc">.    </tspan><tspan class="value">Self-hostable event analytics engine. Ingests 100k+ events/sec using</tspan>
+<tspan x="20" y="590" class="cc">.    </tspan><tspan class="value">Go, Redis, and Kafka, featuring sliding-window rate limits, O(1)</tspan>
+<tspan x="20" y="612" class="cc">.    </tspan><tspan class="value">unique counts, and live anomaly detection.</tspan>
+<tspan x="20" y="634" class="cc">.    </tspan><tspan class="key">💻 24 Commits  |  📝 3,930 LOC  |  🚀 Python</tspan>
 
 </text>
 </svg>

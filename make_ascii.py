@@ -4,8 +4,12 @@ Since background = white (brightness ~255), a simple threshold works perfectly:
   - bright white pixels (>230) → SPACE  (blank background)
   - dark/colored pixels (<=230) → ASCII char from BODY_RAMP
 """
+import json
+import textwrap
+import html
+import re
 from PIL import Image, ImageEnhance, ImageFilter
-import sys, html, os, urllib.request, json, random, textwrap
+import sys, os, urllib.request, random
 
 QUOTES = [
     ("Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "Martin Fowler"),
@@ -104,11 +108,40 @@ def get_github_stats(username="Mausam5055"):
 
 def get_top_repos(username="Mausam5055", limit=4):
     try:
-        req = urllib.request.Request(f"https://api.github.com/users/{username}/repos?sort=pushed&per_page=30", headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request(f"https://api.github.com/users/{username}/repos?sort=pushed&per_page=20", headers={"User-Agent": "Mozilla/5.0"})
         repos = json.loads(urllib.request.urlopen(req).read())
         # Filter out forks and the profile README repo itself
         repos = [r for r in repos if not r.get("fork") and r.get("name").lower() != username.lower()]
-        return repos[:limit]
+        
+        detailed_repos = []
+        for r in repos[:8]:  # limit to 8 to avoid rate limits
+            name = r.get("name")
+            commits = 0
+            loc = 0
+            try:
+                c_req = urllib.request.Request(f"https://api.github.com/repos/{username}/{name}/commits?per_page=1", headers={"User-Agent": "Mozilla"})
+                with urllib.request.urlopen(c_req) as resp:
+                    link = resp.getheader('Link')
+                    if link:
+                        match = re.search(r'page=(\d+)>; rel="last"', link)
+                        if match: commits = int(match.group(1))
+                    else:
+                        commits = len(json.loads(resp.read()))
+                
+                l_req = urllib.request.Request(f"https://api.github.com/repos/{username}/{name}/languages", headers={"User-Agent": "Mozilla"})
+                with urllib.request.urlopen(l_req) as resp:
+                    langs = json.loads(resp.read())
+                    loc = sum(langs.values()) // 30
+            except Exception as e:
+                pass
+                
+            r["commits_count"] = commits
+            r["loc_count"] = loc
+            detailed_repos.append(r)
+            
+        # Sort by commits and LOC
+        detailed_repos.sort(key=lambda x: (x.get("commits_count", 0), x.get("loc_count", 0)), reverse=True)
+        return detailed_repos[:limit]
     except Exception as e:
         print("Failed to fetch repos for projects:", e)
         return []
@@ -367,11 +400,8 @@ def make_projects_svg(repos, dark=True):
             name = repo.get("name", "Unknown")
             desc = repo.get("description", "") or "No description provided."
             lang = repo.get("language", "") or "Unknown"
-            stars = repo.get("stargazers_count", 0)
-            forks = repo.get("forks_count", 0)
-            size_kb = repo.get("size", 0)
-            size_mb = round(size_kb / 1024, 1) if size_kb > 1024 else f"{size_kb}KB"
-            size_str = f"{size_mb}MB" if isinstance(size_mb, float) else size_mb
+            commits = repo.get("commits_count", 0)
+            loc = repo.get("loc_count", 0)
             
             wrapped_desc = textwrap.wrap(desc, width=70)
             
@@ -382,7 +412,7 @@ def make_projects_svg(repos, dark=True):
                 tspans += f'<tspan x="20" y="{y_pos}" class="cc">.    </tspan><tspan class="value">{html.escape(line)}</tspan>\n'
                 y_pos += 22
                 
-            stats_line = f"🌟 {stars} Stars  |  🍴 {forks} Forks  |  📏 {size_str}  |  💻 {lang}"
+            stats_line = f"💻 {commits:,} Commits  |  📝 {loc:,} LOC  |  🚀 {lang}"
             tspans += f'<tspan x="20" y="{y_pos}" class="cc">.    </tspan><tspan class="key">{html.escape(stats_line)}</tspan>\n'
             y_pos += 30
 
