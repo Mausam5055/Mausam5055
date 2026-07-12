@@ -106,8 +106,8 @@ def get_top_repos(username="Mausam5055", limit=4):
     try:
         req = urllib.request.Request(f"https://api.github.com/users/{username}/repos?sort=pushed&per_page=30", headers={"User-Agent": "Mozilla/5.0"})
         repos = json.loads(urllib.request.urlopen(req).read())
-        # Filter out forks and take top ones
-        repos = [r for r in repos if not r.get("fork")]
+        # Filter out forks and the profile README repo itself
+        repos = [r for r in repos if not r.get("fork") and r.get("name").lower() != username.lower()]
         return repos[:limit]
     except Exception as e:
         print("Failed to fetch repos for projects:", e)
