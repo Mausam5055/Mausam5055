@@ -207,6 +207,63 @@ text, tspan {{white-space: pre;}}
 </text>
 </svg>"""
 
+def make_hackatime_svg(dark=True):
+    bg    = "#161b22" if dark else "#f6f8fa"
+    fg    = "#c9d1d9" if dark else "#24292f"
+    key_c = "#ffa657" if dark else "#953800"
+    val_c = "#a5d6ff" if dark else "#0a3069"
+    cc_c  = "#616e7f" if dark else "#c2cfde"
+
+    stats_col1 = [
+        ("TypeScript", "75h 55m"), ("Text", "33h 44m"), ("Other", "9h 12m"),
+        ("Markdown", "5h 50m"), ("Shell", "1h 54m"), ("SQL", "1h 12m"),
+        ("Batchfile", "26m"), ("TOML", "21m"), ("XML", "14m"),
+        ("PowerShell", "10m"), ("Java", "4m")
+    ]
+    stats_col2 = [
+        ("Python", "42h 58m"), ("JavaScript", "14h 39m"), ("JSON", "6h 24m"),
+        ("CSS", "3h 46m"), ("INI", "1h 17m"), ("JSX", "28m"),
+        ("HTML", "23m"), ("YAML", "20m"), ("C++", "11m"),
+        ("Go", "6m"), ("Docker", "2m")
+    ]
+
+    tspans = f'<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Hackatime Stats ]----------------------------------------</tspan>\n'
+    
+    y_pos = 60
+    for i in range(len(stats_col1)):
+        k1, v1 = stats_col1[i]
+        k2, v2 = stats_col2[i] if i < len(stats_col2) else ("", "")
+        
+        line = f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="key">{html.escape(k1)}</tspan>:<tspan class="cc"> {"." * (15 - len(k1))} </tspan><tspan class="value">{v1.rjust(8)}</tspan>    <tspan class="cc">|    </tspan>'
+        if k2:
+            line += f'<tspan class="key">{html.escape(k2)}</tspan>:<tspan class="cc"> {"." * (15 - len(k2))} </tspan><tspan class="value">{v2.rjust(8)}</tspan>\n'
+        else:
+            line += '\n'
+        tspans += line
+        y_pos += 24
+
+    total_height = y_pos + 20
+
+    return f"""<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="{total_height}px" font-size="16px">
+<style>
+@font-face {{
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}}
+.key   {{fill: {key_c};}}
+.value {{fill: {val_c};}}
+.cc    {{fill: {cc_c};}}
+text, tspan {{white-space: pre;}}
+</style>
+<rect width="800px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<text x="20" y="30" fill="{fg}">
+{tspans}
+</text>
+</svg>"""
 
 if __name__ == "__main__":
     print(f"Loading {IMG_PATH} …")
@@ -236,6 +293,12 @@ if __name__ == "__main__":
                         (False, r"d:\Mausam5055\quote_light_v1.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_quote_svg(dark=dark))
+        print(f"✓ {fname}")
+        
+    for dark, fname in [(True,  r"d:\Mausam5055\hackatime_dark_v1.svg"),
+                        (False, r"d:\Mausam5055\hackatime_light_v1.svg")]:
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(make_hackatime_svg(dark=dark))
         print(f"✓ {fname}")
 
     print("Done!")
