@@ -1,76 +1,71 @@
 """
-High-quality ASCII art → SVG generator for GitHub README.
-Produces clean, recognizable output matching the Andrew Grant reference style.
+Clean ASCII-art to SVG generator.
+Strategy: resize the source image to (W × H) directly — PIL LANCZOS handles
+quality downsampling, and the chars' 2× height naturally compensates for the
+"squish", producing correct body proportions in the rendered SVG.
 """
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
-import html, os
+import html, os, urllib.request
 
+# ── Download profile picture ──────────────────────────────────────────────────
+IMG_URL  = "https://avatars.githubusercontent.com/u/104557109?v=4"
 IMG_PATH = r"d:\Mausam5055\profile_pic.jpg"
+if not os.path.exists(IMG_PATH):
+    urllib.request.urlretrieve(IMG_URL, IMG_PATH)
+    print("Downloaded profile picture")
 
-# SVG layout
-# ASCII panel: x=15 … x=375 → 360px / 9.6px per char ≈ 37 chars;
-# use 40 for a little overflow with spaces
-# Lines: y=30..510, step=20 → 25 lines
+# ── Target ASCII grid ─────────────────────────────────────────────────────────
+# SVG: 985×530px, ASCII x=15..375 (360px / 9.6px/char = 37 chars),
+#       y from 30 to 510, step 20 → 25 lines
 W, H = 40, 25
 
-# Dense → sparse ramp  (dark pixel → dense char → looks bright on dark bg)
-# Keep it SHORT (< 15 chars) for clean, readable output
-RAMP = "$@#%&W*o+;:,. "   # 14 chars
+# Dense → sparse  (dark pixel → dense char → appears bright on dark SVG bg)
+# SHORT ramp = clean, not noisy
+RAMP = "$@#%&W*o+=;:,. "   # 15 chars: 0=densest, 14=space
 
-
-def load_and_prepare(path):
-    img = Image.open(path).convert("L")
+# ── Image processing ──────────────────────────────────────────────────────────
+def build_ascii(img_path, width, height):
+    img = Image.open(img_path).convert("L")
     iw, ih = img.size
 
-    # Slight inner crop to remove any border artefacts
-    pad = int(iw * 0.02)
-    img = img.crop((pad, pad, iw - pad, ih - pad))
+    # 1. Crop: skip the noisy venue ceiling/lights at the top (~12%),
+    #    also trim 2% sides/bottom to remove border artefacts.
+    top    = int(ih * 0.12)   # ← KEY FIX: cuts the bright ceiling lights
+    bottom = int(ih * 0.98)
+    left   = int(iw * 0.03)
+    right  = int(iw * 0.97)
+    img = img.crop((left, top, right, bottom))
 
-    # Step 1: Gaussian blur to kill high-frequency noise before resize
-    img = img.filter(ImageFilter.GaussianBlur(radius=1.8))
+    # 2. Heavy pre-blur at full res BEFORE downscale to kill background noise
+    img = img.filter(ImageFilter.GaussianBlur(radius=4))
 
-    # Step 2: stretch histogram (auto-contrast ignores 1% outliers each end)
-    img = ImageOps.autocontrast(img, cutoff=1)
+    # 3. Stretch histogram — makes dark shirt black, bright bg white
+    img = ImageOps.autocontrast(img, cutoff=3)
 
-    # Step 3: boost contrast a bit further, darken slightly so body stands out
-    img = ImageEnhance.Contrast(img).enhance(2.0)
-    img = ImageEnhance.Brightness(img).enhance(0.82)
+    # 4. Strong contrast + darken so body/shirt dominates
+    img = ImageEnhance.Contrast(img).enhance(2.5)
+    img = ImageEnhance.Brightness(img).enhance(0.75)
 
-    return img
+    # 5. Resize directly to (W, H) — every output row is unique (no duplicates)
+    img = img.resize((width, height), Image.LANCZOS)
 
+    # 6. Light unsharp mask to re-crisp edges after downscale
+    img = img.filter(ImageFilter.UnsharpMask(radius=1, percent=100, threshold=3))
 
-def img_to_ascii(img, width, height):
-    """
-    Resize image correctly for monospace display.
-
-    Consolas @ 16px: char_width ≈ 9.6px, line_height = 20px
-    aspect = 9.6/20 = 0.48   (chars are taller than wide)
-
-    To avoid vertical stretching we resize the image to
-        (width, height * aspect)  pixels
-    so that when rendered at the tall char dimensions the proportions cancel.
-    """
-    aspect  = 0.48                                   # char_w / char_h
-    px_h    = max(4, round(height * aspect))         # ≈ 12 pixel rows
-    img_rs  = img.resize((width, px_h), Image.LANCZOS)
-
+    # 7. Map pixel → char
+    px       = img.load()
     ramp_len = len(RAMP) - 1
-    px       = img_rs.load()
     rows     = []
-
-    for row in range(height):
-        # Map each of the 25 output rows to one of the ~12 pixel rows
-        iy  = round(row / (height - 1) * (px_h - 1))
-        line = ""
-        for col in range(width):
-            b    = px[col, iy]
-            idx  = int(b / 255 * ramp_len)
-            line += RAMP[idx]
-        rows.append(html.escape(line))
-
+    for y in range(height):
+        row = ""
+        for x in range(width):
+            idx  = int(px[x, y] / 255 * ramp_len)
+            row += RAMP[idx]
+        rows.append(html.escape(row))
     return rows
 
 
+# ── SVG builder ───────────────────────────────────────────────────────────────
 def make_svg(ascii_lines, dark=True):
     bg    = "#161b22" if dark else "#f6f8fa"
     fg    = "#c9d1d9" if dark else "#24292f"
@@ -80,10 +75,10 @@ def make_svg(ascii_lines, dark=True):
     del_c = "#f85149" if dark else "#cf222e"
     cc_c  = "#616e7f" if dark else "#c2cfde"
 
-    tspans = ""
-    for i, line in enumerate(ascii_lines):
-        y = 30 + i * 20
-        tspans += f'<tspan x="15" y="{y}">{line}</tspan>\n'
+    tspans = "\n".join(
+        f'<tspan x="15" y="{30 + i * 20}">{ln}</tspan>'
+        for i, ln in enumerate(ascii_lines)
+    )
 
     return f"""<?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
@@ -104,7 +99,8 @@ text, tspan {{white-space: pre;}}
 </style>
 <rect width="985px" height="530px" fill="{bg}" rx="15"/>
 <text x="15" y="30" fill="{fg}">
-{tspans}</text>
+{tspans}
+</text>
 <text x="390" y="30" fill="{fg}">
 <tspan x="390" y="30">mausam@github</tspan> -———————————————————————————————————————————-—-
 <tspan x="390" y="50"  class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Windows 11, Android, Linux</tspan>
@@ -135,29 +131,22 @@ text, tspan {{white-space: pre;}}
 
 
 if __name__ == "__main__":
-    print("Loading & preprocessing image …")
-    img = load_and_prepare(IMG_PATH)
+    lines = build_ascii(IMG_PATH, W, H)
 
-    print("Converting to ASCII …")
-    lines = img_to_ascii(img, W, H)
-
-    print(f"\nPreview ({len(lines)} lines × {len(lines[0])} chars):\n")
-    print("+" + "-" * len(lines[0]) + "+")
+    print(f"Preview ({len(lines)} lines × {len(lines[0])} chars):\n")
+    sep = "+" + "-" * len(lines[0]) + "+"
+    print(sep)
     for ln in lines:
         print("|" + ln + "|")
-    print("+" + "-" * len(lines[0]) + "+")
+    print(sep)
 
-    print("\nWriting SVGs …")
     for dark, fname in [(True,  r"d:\Mausam5055\dark_mode.svg"),
                         (False, r"d:\Mausam5055\light_mode.svg")]:
-        svg = make_svg(lines, dark=dark)
         with open(fname, "w", encoding="utf-8") as f:
-            f.write(svg)
-        print(f"  ✓ {fname}")
+            f.write(make_svg(lines, dark=dark))
+        mode = "dark" if dark else "light"
+        print(f"\n✓ Written {mode}_mode.svg")
 
-    # Clean up temp download
     if os.path.exists(IMG_PATH):
         os.remove(IMG_PATH)
-        print(f"  cleaned {IMG_PATH}")
-
-    print("Done!")
+    print("\nDone!")
