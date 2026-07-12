@@ -48,16 +48,17 @@
 
 <div align="center">
 
-<!-- Row 1 · Languages -->
-![](https://skillicons.dev/icons?i=html,css,js,ts,react,nodejs,express,python,java,cpp&perline=10&theme=dark)
+| | | | | | | | | | |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://skillicons.dev/icons?i=html&theme=dark" /> | <img src="https://skillicons.dev/icons?i=css&theme=dark" /> | <img src="https://skillicons.dev/icons?i=js&theme=dark" /> | <img src="https://skillicons.dev/icons?i=ts&theme=dark" /> | <img src="https://skillicons.dev/icons?i=react&theme=dark" /> | <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" /> | <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" /> | <img src="https://skillicons.dev/icons?i=express&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vite&theme=dark" /> | <img src="https://skillicons.dev/icons?i=npm&theme=dark" /> |
+| <img src="https://skillicons.dev/icons?i=c&theme=dark" /> | <img src="https://skillicons.dev/icons?i=cpp&theme=dark" /> | <img src="https://skillicons.dev/icons?i=cs&theme=dark" /> | <img src="https://skillicons.dev/icons?i=java&theme=dark" /> | <img src="https://skillicons.dev/icons?i=python&theme=dark" /> | <img src="https://skillicons.dev/icons?i=django&theme=dark" /> | <img src="https://skillicons.dev/icons?i=flask&theme=dark" /> | <img src="https://skillicons.dev/icons?i=dotnet&theme=dark" /> | <img src="https://skillicons.dev/icons?i=bash&theme=dark" /> | <img src="https://skillicons.dev/icons?i=powershell&theme=dark" /> |
+| <img src="https://skillicons.dev/icons?i=mysql&theme=dark" /> | <img src="https://skillicons.dev/icons?i=postgres&theme=dark" /> | <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" /> | <img src="https://skillicons.dev/icons?i=redis&theme=dark" /> | <img src="https://skillicons.dev/icons?i=firebase&theme=dark" /> | <img src="https://skillicons.dev/icons?i=supabase&theme=dark" /> | <img src="https://skillicons.dev/icons?i=aws&theme=dark" /> | <img src="https://skillicons.dev/icons?i=gcp&theme=dark" /> | <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vercel&theme=dark" /> |
+| <img src="https://skillicons.dev/icons?i=git&theme=dark" /> | <img src="https://skillicons.dev/icons?i=github&theme=dark" /> | <img src="https://skillicons.dev/icons?i=gitlab&theme=dark" /> | <img src="https://skillicons.dev/icons?i=docker&theme=dark" /> | <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" /> | <img src="https://skillicons.dev/icons?i=linux&theme=dark" /> | <img src="https://skillicons.dev/icons?i=ubuntu&theme=dark" /> | <img src="https://skillicons.dev/icons?i=windows&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vim&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vscode&theme=dark" /> |
+| <img src="https://skillicons.dev/icons?i=numpy&theme=dark" /> | <img src="https://skillicons.dev/icons?i=pandas&theme=dark" /> | <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" /> | <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" /> | <img src="https://skillicons.dev/icons?i=matlab&theme=dark" /> | <img src="https://skillicons.dev/icons?i=arduino&theme=dark" /> | <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" /> | <img src="https://skillicons.dev/icons?i=figma&theme=dark" /> | <img src="https://skillicons.dev/icons?i=notion&theme=dark" /> | <img src="https://skillicons.dev/icons?i=md&theme=dark" /> |
 
-<!-- Row 2 · Data · Tools · Deployment -->
-![](https://skillicons.dev/icons?i=c,mysql,mongodb,git,github,vscode,linux,windows,postman,figma&perline=10&theme=dark)
+<br>
 
-<!-- Row 3 · Libraries · Platforms · Extras -->
-![](https://skillicons.dev/icons?i=numpy,pandas,sklearn,pytorch,arduino,raspberrypi,vercel,cloudflare,notion,npm&perline=10&theme=dark)
-
-> *Yes… I'm pretty comfortable with every language and tool on this list.*
+> *Yes... I'm pretty comfortable with every language and tool on this list.*
 
 </div>
 
