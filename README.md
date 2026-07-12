@@ -63,8 +63,8 @@
     </td>
     <td width="800" valign="top">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./projects_dark_v1.svg">
-        <img alt="Top Projects" src="./projects_light_v1.svg">
+        <source media="(prefers-color-scheme: dark)" srcset="./projects_dark_v1.svg?v=2">
+        <img alt="Top Projects" src="./projects_light_v1.svg?v=2">
       </picture>
     </td>
   </tr>
