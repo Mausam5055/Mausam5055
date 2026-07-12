@@ -96,7 +96,7 @@ def make_svg(ascii_lines, stats, dark=True):
     )
 
     return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1030px" height="530px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -112,7 +112,7 @@ size-adjust: 109%;
 .cc    {{fill: {cc_c};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="985px" height="530px" fill="{bg}" rx="15"/>
+<rect width="1030px" height="530px" fill="{bg}" rx="15"/>
 <text x="15" y="30" fill="{fg}">
 {tspans}
 </text>
