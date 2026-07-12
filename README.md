@@ -1,7 +1,7 @@
 <a href="https://github.com/Mausam5055/Mausam5055">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mausam5055/Mausam5055/main/dark_mode.svg">
-    <img alt="Mausam Kar's GitHub Profile README" src="https://raw.githubusercontent.com/Mausam5055/Mausam5055/main/light_mode.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mausam5055/Mausam5055/main/dark_mode.svg?v=2">
+    <img alt="Mausam Kar's GitHub Profile README" src="https://raw.githubusercontent.com/Mausam5055/Mausam5055/main/light_mode.svg?v=2">
   </picture>
 </a>
 
