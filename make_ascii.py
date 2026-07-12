@@ -1,57 +1,49 @@
 """
 Silhouette-only ASCII art generator for GitHub README SVG.
-Approach: THRESHOLD — dark pixels (person's body) → characters,
-           bright pixels (background) → pure SPACE (blank).
-Result: clean body outline, blank rest.
+Dark pixels (person's body) → characters. Bright background → pure SPACE.
 """
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 import html, os, urllib.request
 
-# ── Download profile picture ───────────────────────────────────────────────────
 IMG_URL  = "https://avatars.githubusercontent.com/u/104557109?v=4"
 IMG_PATH = r"d:\Mausam5055\profile_pic.jpg"
 if not os.path.exists(IMG_PATH):
     urllib.request.urlretrieve(IMG_URL, IMG_PATH)
-    print("Downloaded profile picture")
 
-# ── ASCII grid dimensions ──────────────────────────────────────────────────────
-# SVG: x=15..~375 → ~40 chars wide,  y=30..510 step=20 → 25 lines
-W, H = 40, 25
+# Grid: SVG x=15..375 → ~38 chars wide max; keep 32 so there's clear padding
+W, H = 32, 22
 
-# ── Threshold settings ────────────────────────────────────────────────────────
-# pixels with brightness < THRESHOLD  →  body  →  gets a char
-# pixels with brightness >= THRESHOLD →  background  →  pure space
-THRESHOLD = 155      # tune: raise to capture more skin/face, lower to tighten
-
-# Chars used ONLY for the person zone  (dense=very dark, light=slightly dark)
-BODY_RAMP = "$@#%&W*o+="   # 10 chars
+# Threshold: pixels < THRESHOLD → body char, >= THRESHOLD → space
+THRESHOLD = 130
+BODY_RAMP = "$@#%&W*o+="   # dense→light, 10 chars
 
 
 def build_ascii(img_path, width, height):
     img = Image.open(img_path).convert("L")
     iw, ih = img.size
 
-    # 1. Crop — skip noisy venue ceiling (top 12%) and trim 3% sides/bottom
-    img = img.crop((int(iw * 0.03), int(ih * 0.12),
-                    int(iw * 0.97), int(ih * 0.98)))
+    # Crop: start from 30% down (skips noisy dark ceiling + hair-vs-bg ambiguity)
+    # tight sides (18% each) to remove dark venue walls
+    img = img.crop((int(iw * 0.22), int(ih * 0.30),
+                    int(iw * 0.78), int(ih * 0.98)))
 
-    # 2. Median filter first — kills point-noise (chair legs, lights, etc.)
+    # Median filter → kills point noise
     img = img.filter(ImageFilter.MedianFilter(size=3))
 
-    # 3. Heavy Gaussian blur — merges background details into smooth bright mass
+    # Heavy Gaussian blur → blends background into uniform bright mass
     img = img.filter(ImageFilter.GaussianBlur(radius=5))
 
-    # 4. Autocontrast — dark shirt stretches to near-0, bright bg to near-255
+    # Stretch histogram so dark shirt = 0, bright bg = 255
     img = ImageOps.autocontrast(img, cutoff=2)
 
-    # 5. Extra contrast + darken — sharpens person vs background boundary
+    # Boost contrast + darken to sharpen person vs background
     img = ImageEnhance.Contrast(img).enhance(2.8)
     img = ImageEnhance.Brightness(img).enhance(0.78)
 
-    # 6. Resize to grid (each pixel → one ASCII char, no duplicate rows)
+    # Resize to grid
     img = img.resize((width, height), Image.LANCZOS)
 
-    # 7. Threshold map
+    # Threshold map: dark = body char, bright = space
     px       = img.load()
     ramp_len = len(BODY_RAMP) - 1
     rows     = []
@@ -60,11 +52,10 @@ def build_ascii(img_path, width, height):
         for x in range(width):
             b = px[x, y]
             if b < THRESHOLD:
-                # Scale 0..THRESHOLD-1  →  BODY_RAMP index
                 idx  = int(b / THRESHOLD * ramp_len)
                 row += BODY_RAMP[idx]
             else:
-                row += " "   # background = blank
+                row += " "
         rows.append(html.escape(row))
     return rows
 
@@ -136,25 +127,20 @@ text, tspan {{white-space: pre;}}
 if __name__ == "__main__":
     lines = build_ascii(IMG_PATH, W, H)
 
-    # Terminal preview
-    print(f"Preview ({len(lines)} lines x {len(lines[0])} chars)\n")
-    sep = "+" + "-" * len(lines[0]) + "+"
+    sep = "+" + "-" * W + "+"
     print(sep)
     for ln in lines:
         print("|" + ln + "|")
     print(sep)
 
-    # Count how many rows have any body chars (sanity check)
-    filled = sum(1 for ln in lines if ln.strip())
-    print(f"\n{filled}/{len(lines)} rows contain body chars")
+    blank_rows = sum(1 for ln in lines if not ln.strip())
+    print(f"\n{blank_rows} fully-blank rows / {len(lines)} total")
 
-    # Write SVGs
     for dark, fname in [(True,  r"d:\Mausam5055\dark_mode.svg"),
                         (False, r"d:\Mausam5055\light_mode.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_svg(lines, dark=dark))
-        mode = "dark" if dark else "light"
-        print(f"✓ Written {mode}_mode.svg")
+        print(f"✓ {fname}")
 
     if os.path.exists(IMG_PATH):
         os.remove(IMG_PATH)
