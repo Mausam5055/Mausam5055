@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="674px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="652px" font-size="16px">
 <style>
 @font-face {
 src: local('Consolas'), local('Consolas Bold');
@@ -14,7 +14,7 @@ size-adjust: 109%;
 .cc    {fill: #616e7f;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="800px" height="674px" fill="#161b22" rx="10" stroke="#616e7f" stroke-width="1"/>
+<rect width="800px" height="652px" fill="#161b22" rx="10" stroke="#616e7f" stroke-width="1"/>
 <text x="20" y="30" fill="#c9d1d9">
 <tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Top Projects &amp; Repositories ]----------------------</tspan>
 <tspan x="20" y="60" class="cc">. </tspan><tspan class="add">📦 Leet-Code</tspan>
@@ -25,24 +25,23 @@ text, tspan {white-space: pre;}
 <tspan x="20" y="170" class="cc">.    </tspan><tspan class="value">two pointers) to help with coding interview preparation and</tspan>
 <tspan x="20" y="192" class="cc">.    </tspan><tspan class="value">competitive programming.</tspan>
 <tspan x="20" y="214" class="cc">.    </tspan><tspan class="key">💻 908 Commits  |  📝 13,291 LOC  |  🚀 Java</tspan>
-<tspan x="20" y="244" class="cc">. </tspan><tspan class="add">📦 Mausam04</tspan>
-<tspan x="20" y="266" class="cc">.    </tspan><tspan class="value">Fourth iteration of my personal portfolio website showcasing projects,</tspan>
-<tspan x="20" y="288" class="cc">.    </tspan><tspan class="value">skills, and professional experience. Built with modern React framework</tspan>
-<tspan x="20" y="310" class="cc">.    </tspan><tspan class="value">featuring smooth GSAP animations, responsive design, dark mode</tspan>
-<tspan x="20" y="332" class="cc">.    </tspan><tspan class="value">support, and SEO optimization to create an impressive online presence.</tspan>
-<tspan x="20" y="354" class="cc">.    </tspan><tspan class="key">💻 87 Commits  |  📝 24,034 LOC  |  🚀 TypeScript</tspan>
-<tspan x="20" y="384" class="cc">. </tspan><tspan class="add">📦 Campus-Sync</tspan>
-<tspan x="20" y="406" class="cc">.    </tspan><tspan class="value">Comprehensive campus management platform developed for Project</tspan>
-<tspan x="20" y="428" class="cc">.    </tspan><tspan class="value">Exhibition 2025. Features student information management, event</tspan>
-<tspan x="20" y="450" class="cc">.    </tspan><tspan class="value">scheduling, attendance tracking, resource booking, and real-time</tspan>
-<tspan x="20" y="472" class="cc">.    </tspan><tspan class="value">notifications to streamline campus operations and enhance student</tspan>
-<tspan x="20" y="494" class="cc">.    </tspan><tspan class="value">experience.</tspan>
-<tspan x="20" y="516" class="cc">.    </tspan><tspan class="key">💻 51 Commits  |  📝 73,567 LOC  |  🚀 TypeScript</tspan>
-<tspan x="20" y="546" class="cc">. </tspan><tspan class="add">📦 NexPulse</tspan>
-<tspan x="20" y="568" class="cc">.    </tspan><tspan class="value">Self-hostable event analytics engine. Ingests 100k+ events/sec using</tspan>
-<tspan x="20" y="590" class="cc">.    </tspan><tspan class="value">Go, Redis, and Kafka, featuring sliding-window rate limits, O(1)</tspan>
-<tspan x="20" y="612" class="cc">.    </tspan><tspan class="value">unique counts, and live anomaly detection.</tspan>
-<tspan x="20" y="634" class="cc">.    </tspan><tspan class="key">💻 24 Commits  |  📝 3,930 LOC  |  🚀 Python</tspan>
+<tspan x="20" y="244" class="cc">. </tspan><tspan class="add">📦 Campus-Sync</tspan>
+<tspan x="20" y="266" class="cc">.    </tspan><tspan class="value">Comprehensive campus management platform developed for Project</tspan>
+<tspan x="20" y="288" class="cc">.    </tspan><tspan class="value">Exhibition 2025. Features student information management, event</tspan>
+<tspan x="20" y="310" class="cc">.    </tspan><tspan class="value">scheduling, attendance tracking, resource booking, and real-time</tspan>
+<tspan x="20" y="332" class="cc">.    </tspan><tspan class="value">notifications to streamline campus operations and enhance student</tspan>
+<tspan x="20" y="354" class="cc">.    </tspan><tspan class="value">experience.</tspan>
+<tspan x="20" y="376" class="cc">.    </tspan><tspan class="key">💻 51 Commits  |  📝 73,567 LOC  |  🚀 TypeScript</tspan>
+<tspan x="20" y="406" class="cc">. </tspan><tspan class="add">📦 NexPulse</tspan>
+<tspan x="20" y="428" class="cc">.    </tspan><tspan class="value">Self-hostable event analytics engine. Ingests 100k+ events/sec using</tspan>
+<tspan x="20" y="450" class="cc">.    </tspan><tspan class="value">Go, Redis, and Kafka, featuring sliding-window rate limits, O(1)</tspan>
+<tspan x="20" y="472" class="cc">.    </tspan><tspan class="value">unique counts, and live anomaly detection.</tspan>
+<tspan x="20" y="494" class="cc">.    </tspan><tspan class="key">💻 24 Commits  |  📝 3,930 LOC  |  🚀 Python</tspan>
+<tspan x="20" y="524" class="cc">. </tspan><tspan class="add">📦 MERN-Auth-System</tspan>
+<tspan x="20" y="546" class="cc">.    </tspan><tspan class="value"> A highly secure, full-stack authentication system built with the MERN</tspan>
+<tspan x="20" y="568" class="cc">.    </tspan><tspan class="value">stack and Next.js, featuring TOTP Multi-Factor Authentication and</tspan>
+<tspan x="20" y="590" class="cc">.    </tspan><tspan class="value">session management.</tspan>
+<tspan x="20" y="612" class="cc">.    </tspan><tspan class="key">💻 7 Commits  |  📝 13,959 LOC  |  🚀 TypeScript</tspan>
 
 </text>
 </svg>

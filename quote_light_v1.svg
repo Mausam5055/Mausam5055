@@ -16,8 +16,8 @@ text, tspan {white-space: pre;}
 <rect width="800px" height="124px" fill="#f6f8fa" rx="10" stroke="#c2cfde" stroke-width="1"/>
 <text x="20" y="30" fill="#24292f">
 <tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Random Dev Quote ]---------------------------------------</tspan>
-<tspan x="20" y="60" class="value">&quot;Code is like humor. When you have to explain it, it&#x27;s bad.&quot;</tspan>
-<tspan x="20" y="94" class="key">                                                                    - Cory House</tspan>
+<tspan x="20" y="60" class="value">&quot;Simplicity is the soul of efficiency.&quot;</tspan>
+<tspan x="20" y="94" class="key">                                                                - Austin Freeman</tspan>
 
 </text>
 </svg>

@@ -289,7 +289,7 @@ def make_hackatime_svg(dark=True):
     total_height = y_pos + 20
 
     return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="550px" height="{total_height}px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="750px" height="{total_height}px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -303,7 +303,7 @@ size-adjust: 109%;
 .cc    {{fill: {cc_c};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="550px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<rect width="750px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
 <text x="20" y="30" fill="{fg}">
 {tspans}
 </text>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="124px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="148px" font-size="16px">
 <style>
 @font-face {
 src: local('Consolas'), local('Consolas Bold');
@@ -13,11 +13,12 @@ size-adjust: 109%;
 .cc    {fill: #616e7f;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="800px" height="124px" fill="#161b22" rx="10" stroke="#616e7f" stroke-width="1"/>
+<rect width="800px" height="148px" fill="#161b22" rx="10" stroke="#616e7f" stroke-width="1"/>
 <text x="20" y="30" fill="#c9d1d9">
 <tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Random Dev Quote ]---------------------------------------</tspan>
-<tspan x="20" y="60" class="value">&quot;Before software can be reusable it first has to be usable.&quot;</tspan>
-<tspan x="20" y="94" class="key">                                                                 - Ralph Johnson</tspan>
+<tspan x="20" y="60" class="value">&quot;Any fool can write code that a computer can understand. Good programmers write</tspan>
+<tspan x="20" y="84" class="value">code that humans can understand.&quot;</tspan>
+<tspan x="20" y="118" class="key">                                                                 - Martin Fowler</tspan>
 
 </text>
 </svg>
