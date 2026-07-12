@@ -116,23 +116,8 @@ def make_svg(ascii_lines, stats, dark=True):
         for i, ln in enumerate(ascii_lines)
     )
 
-    quote_text, quote_author = random.choice(QUOTES)
-    wrapped_quote = textwrap.wrap(f'"{quote_text}"', width=54)
-    
-    quote_tspans = f'<tspan x="390" y="530" class="cc">. </tspan>\n'
-    quote_tspans += f'<tspan x="390" y="550">- Random Dev Quote </tspan><tspan class="cc">-----------------------------------------</tspan>\n'
-    y_pos = 570
-    for line in wrapped_quote:
-        quote_tspans += f'<tspan x="390" y="{y_pos}" class="cc">. </tspan><tspan class="value">{html.escape(line)}</tspan>\n'
-        y_pos += 20
-    
-    author_str = f"- {quote_author}".rjust(54)
-    quote_tspans += f'<tspan x="390" y="{y_pos}" class="cc">. </tspan><tspan class="key">{html.escape(author_str)}</tspan>\n'
-    
-    total_height = max(y_pos + 40, 530)
-
     return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1030px" height="{total_height}px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1030px" height="530px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -148,7 +133,7 @@ size-adjust: 109%;
 .cc    {{fill: {cc_c};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="1030px" height="{total_height}px" fill="{bg}" rx="15"/>
+<rect width="1030px" height="530px" fill="{bg}" rx="15"/>
 <text x="15" y="30" fill="{fg}">
 {tspans}
 </text>
@@ -177,7 +162,49 @@ text, tspan {{white-space: pre;}}
 <tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">{str(stats["repos"]).rjust(3)} {{Contributed: 24}}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">{str(stats["stars"]).rjust(4)}</tspan>
 <tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">{str(stats["commits"]).rjust(4)}</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">{str(stats["followers"]).rjust(4)}</tspan>
 <tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">446,276</tspan> ( <tspan class="addColor">523,178</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">76,902</tspan><tspan class="delColor">--</tspan> )
-{quote_tspans}</text>
+</text>
+</svg>"""
+
+def make_quote_svg(dark=True):
+    bg    = "#161b22" if dark else "#f6f8fa"
+    fg    = "#c9d1d9" if dark else "#24292f"
+    key_c = "#ffa657" if dark else "#953800"
+    val_c = "#a5d6ff" if dark else "#0a3069"
+    cc_c  = "#616e7f" if dark else "#c2cfde"
+
+    quote_text, quote_author = random.choice(QUOTES)
+    wrapped_quote = textwrap.wrap(f'"{quote_text}"', width=80)
+    
+    quote_tspans = f'<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Random Dev Quote ]---------------------------------------</tspan>\n'
+    y_pos = 60
+    for line in wrapped_quote:
+        quote_tspans += f'<tspan x="20" y="{y_pos}" class="value">{html.escape(line)}</tspan>\n'
+        y_pos += 24
+    
+    author_str = f"- {quote_author}".rjust(80)
+    quote_tspans += f'<tspan x="20" y="{y_pos + 10}" class="key">{html.escape(author_str)}</tspan>\n'
+    
+    total_height = y_pos + 40
+
+    return f"""<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="{total_height}px" font-size="16px">
+<style>
+@font-face {{
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}}
+.key   {{fill: {key_c};}}
+.value {{fill: {val_c};}}
+.cc    {{fill: {cc_c};}}
+text, tspan {{white-space: pre;}}
+</style>
+<rect width="800px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<text x="20" y="30" fill="{fg}">
+{quote_tspans}
+</text>
 </svg>"""
 
 
@@ -199,10 +226,16 @@ if __name__ == "__main__":
     stats = get_github_stats()
     print(f"Stats loaded: {stats}")
 
-    for dark, fname in [(True,  r"d:\Mausam5055\dark_mode_v4.svg"),
-                        (False, r"d:\Mausam5055\light_mode_v4.svg")]:
+    for dark, fname in [(True,  r"d:\Mausam5055\dark_mode_v5.svg"),
+                        (False, r"d:\Mausam5055\light_mode_v5.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_svg(lines, stats, dark=dark))
+        print(f"✓ {fname}")
+        
+    for dark, fname in [(True,  r"d:\Mausam5055\quote_dark_v1.svg"),
+                        (False, r"d:\Mausam5055\quote_light_v1.svg")]:
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(make_quote_svg(dark=dark))
         print(f"✓ {fname}")
 
     print("Done!")

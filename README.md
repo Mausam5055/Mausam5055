@@ -1,9 +1,15 @@
 <a href="https://github.com/Mausam5055/Mausam5055">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode_v4.svg">
-    <img alt="Mausam Kar's GitHub Profile README" src="./light_mode_v4.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode_v5.svg">
+    <img alt="Mausam Kar's GitHub Profile README" src="./light_mode_v5.svg">
   </picture>
 </a>
+
+### ✍️ Random Dev Quote
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./quote_dark_v1.svg">
+  <img alt="Random Dev Quote" src="./quote_light_v1.svg">
+</picture>
 
 
 <!-- 🚀 What I Do — commented out, uncomment to restore
