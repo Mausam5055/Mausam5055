@@ -67,7 +67,7 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="410" class="cc">. </tspan>
 <tspan x="390" y="450">- GitHub Stats </tspan><tspan class="cc">-----------------------------------------------</tspan>
 <tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value"> 79 {Contributed: 24}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value"> 414</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">2,916</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">  21</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">2,924</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">  21</tspan>
 <tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">446,276</tspan> ( <tspan class="addColor">523,178</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">76,902</tspan><tspan class="delColor">--</tspan> )
 </text>
 </svg>

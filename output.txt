@@ -1,0 +1,19 @@
+<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Windows 11, Android, Linux</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">Assam, India &#x1F1EE;&#x1F1F3;</tspan>
+<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">University</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">VIT Bhopal University</tspan>
+<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">VSCode 1.96.0, Cursor AI</tspan>
+<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages.Programming</tspan>:<tspan class="cc"> ....... </tspan><tspan class="value">Python, Java, JavaScript, C++</tspan>
+<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages.Web</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">HTML, CSS, React, Node.js</tspan>
+<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages.Data</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">SQL, MongoDB, JSON, YAML</tspan>
+<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Interests.Dev</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Full-Stack, AI/ML, Open Source</tspan>
+<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Interests.Tech</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">Cloud Computing, Emerging Tech</tspan>
+<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Bio</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">Learn to remove 'L' 🏆</tspan>
+<tspan x="390" y="310">- Contact </tspan><tspan class="cc">----------------------------------------------------</tspan>
+<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email.Personal</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">rikikumkar@gmail.com</tspan>
+<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">mausam04.vercel.app</tspan>
+<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">mausam-kar</tspan>
+<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">Mausam5055</tspan>
+<tspan x="390" y="430">- GitHub Stats </tspan><tspan class="cc">-----------------------------------------------</tspan>
+<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">{str(stats["repos"]).rjust(3)} {Contributed: --}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">{str(stats["stars"]).rjust(4)}</tspan>
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">--</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">{str(stats["followers"]).rjust(4)}</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">--</tspan> ( <tspan class="addColor">--</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">--</tspan><tspan class="delColor">--</tspan> )
