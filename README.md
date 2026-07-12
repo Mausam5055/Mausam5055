@@ -59,29 +59,6 @@
 </div>
 
 
-# 📊 GitHub Stats:
-<img align="right" height="200" src="https://i.imgflip.com/65efzo.gif" />
-
-
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mausam5055&radius=16&theme=react-dark&area=true&order=4" height="300" alt="activity-graph graph" />
-</div>
-
-###
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Mausam5055&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-
-
-
-
-
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Mausam5055&limit=5&theme=aura&combine_all_yearly_contributions=true)
-
-
 
 
 
