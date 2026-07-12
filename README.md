@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="https://i.postimg.cc/ncJ7vwqH/footer.gif" width="100%" alt="Header Animation" />
+</div>
+
+<br>
+
 <a href="https://github.com/Mausam5055/Mausam5055">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./dark_mode_v5.svg">
