@@ -5,7 +5,22 @@ Since background = white (brightness ~255), a simple threshold works perfectly:
   - dark/colored pixels (<=230) → ASCII char from BODY_RAMP
 """
 from PIL import Image, ImageEnhance, ImageFilter
-import sys, html, os, urllib.request, json
+import sys, html, os, urllib.request, json, random, textwrap
+
+QUOTES = [
+    ("Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "Martin Fowler"),
+    ("First, solve the problem. Then, write the code.", "John Johnson"),
+    ("Experience is the name everyone gives to their mistakes.", "Oscar Wilde"),
+    ("Java is to JavaScript what car is to Carpet.", "Chris Heilmann"),
+    ("Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.", "Dan Salomon"),
+    ("Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.", "Antoine de Saint-Exupery"),
+    ("Code is like humor. When you have to explain it, it's bad.", "Cory House"),
+    ("Fix the cause, not the symptom.", "Steve Maguire"),
+    ("Optimism is an occupational hazard of programming: feedback is the treatment.", "Kent Beck"),
+    ("Simplicity is the soul of efficiency.", "Austin Freeman"),
+    ("Before software can be reusable it first has to be usable.", "Ralph Johnson"),
+    ("Make it work, make it right, make it fast.", "Kent Beck")
+]
 
 # ── INPUT: path to the background-removed image (white bg) ────────────────────
 # Save your background-removed image into d:\Mausam5055\ and set the name here
@@ -101,8 +116,23 @@ def make_svg(ascii_lines, stats, dark=True):
         for i, ln in enumerate(ascii_lines)
     )
 
+    quote_text, quote_author = random.choice(QUOTES)
+    wrapped_quote = textwrap.wrap(f'"{quote_text}"', width=54)
+    
+    quote_tspans = f'<tspan x="390" y="530" class="cc">. </tspan>\n'
+    quote_tspans += f'<tspan x="390" y="550">- Random Dev Quote </tspan><tspan class="cc">-----------------------------------------</tspan>\n'
+    y_pos = 570
+    for line in wrapped_quote:
+        quote_tspans += f'<tspan x="390" y="{y_pos}" class="cc">. </tspan><tspan class="value">{html.escape(line)}</tspan>\n'
+        y_pos += 20
+    
+    author_str = f"- {quote_author}".rjust(54)
+    quote_tspans += f'<tspan x="390" y="{y_pos}" class="cc">. </tspan><tspan class="key">{html.escape(author_str)}</tspan>\n'
+    
+    total_height = max(y_pos + 40, 530)
+
     return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1030px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1030px" height="{total_height}px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -118,7 +148,7 @@ size-adjust: 109%;
 .cc    {{fill: {cc_c};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="1030px" height="530px" fill="{bg}" rx="15"/>
+<rect width="1030px" height="{total_height}px" fill="{bg}" rx="15"/>
 <text x="15" y="30" fill="{fg}">
 {tspans}
 </text>
@@ -147,7 +177,7 @@ text, tspan {{white-space: pre;}}
 <tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">{str(stats["repos"]).rjust(3)} {{Contributed: 24}}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">{str(stats["stars"]).rjust(4)}</tspan>
 <tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">{str(stats["commits"]).rjust(4)}</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">{str(stats["followers"]).rjust(4)}</tspan>
 <tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">446,276</tspan> ( <tspan class="addColor">523,178</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">76,902</tspan><tspan class="delColor">--</tspan> )
-</text>
+{quote_tspans}</text>
 </svg>"""
 
 
