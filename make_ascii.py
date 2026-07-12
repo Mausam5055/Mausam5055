@@ -1,61 +1,64 @@
 """
-Silhouette-only ASCII art generator for GitHub README SVG.
-Dark pixels (person's body) → characters. Bright background → pure SPACE.
+ASCII art generator — works with a WHITE-background removed image.
+Since background = white (brightness ~255), a simple threshold works perfectly:
+  - bright white pixels (>230) → SPACE  (blank background)
+  - dark/colored pixels (<=230) → ASCII char from BODY_RAMP
 """
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
-import html, os, urllib.request
+from PIL import Image, ImageEnhance, ImageFilter
+import html, os, sys
 
-IMG_URL  = "https://avatars.githubusercontent.com/u/104557109?v=4"
-IMG_PATH = r"d:\Mausam5055\profile_pic.jpg"
+# ── INPUT: path to the background-removed image (white bg) ────────────────────
+# Save your background-removed image into d:\Mausam5055\ and set the name here
+IMG_PATH = r"d:\Mausam5055\profile_nobg.png"   # ← change filename if needed
+
 if not os.path.exists(IMG_PATH):
-    urllib.request.urlretrieve(IMG_URL, IMG_PATH)
+    print(f"ERROR: Image not found at {IMG_PATH}")
+    print("Please save your background-removed image there and re-run.")
+    sys.exit(1)
 
-# Grid: SVG x=15..375 → ~38 chars wide max; keep 32 so there's clear padding
-W, H = 32, 22
+# ── ASCII grid ────────────────────────────────────────────────────────────────
+W, H = 44, 26
 
-# Threshold: pixels < THRESHOLD → body char, >= THRESHOLD → space
-THRESHOLD = 130
-BODY_RAMP = "$@#%&W*o+="   # dense→light, 10 chars
+# Dense → sparse (dark shirt/hair → dense, medium skin → lighter)
+BODY_RAMP = "$@#%&W*o+="
+
+# Pixels brighter than this = white background → space
+BG_THRESHOLD = 235
 
 
 def build_ascii(img_path, width, height):
-    img = Image.open(img_path).convert("L")
-    iw, ih = img.size
+    img = Image.open(img_path).convert("RGBA")
 
-    # Crop: start from 30% down (skips noisy dark ceiling + hair-vs-bg ambiguity)
-    # tight sides (18% each) to remove dark venue walls
-    img = img.crop((int(iw * 0.22), int(ih * 0.30),
-                    int(iw * 0.78), int(ih * 0.98)))
+    # If image has transparency, composite onto white background first
+    bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
+    img = Image.alpha_composite(bg, img).convert("RGB")
 
-    # Median filter → kills point noise
-    img = img.filter(ImageFilter.MedianFilter(size=3))
+    # Grayscale
+    gray = img.convert("L")
 
-    # Heavy Gaussian blur → blends background into uniform bright mass
-    img = img.filter(ImageFilter.GaussianBlur(radius=5))
+    # Boost contrast so dark shirt = very dark, white bg = very bright
+    gray = ImageEnhance.Contrast(gray).enhance(1.8)
 
-    # Stretch histogram so dark shirt = 0, bright bg = 255
-    img = ImageOps.autocontrast(img, cutoff=2)
+    # Resize directly to grid
+    gray = gray.resize((width, height), Image.LANCZOS)
 
-    # Boost contrast + darken to sharpen person vs background
-    img = ImageEnhance.Contrast(img).enhance(2.8)
-    img = ImageEnhance.Brightness(img).enhance(0.78)
+    # Light sharpen
+    gray = gray.filter(ImageFilter.UnsharpMask(radius=1, percent=100, threshold=2))
 
-    # Resize to grid
-    img = img.resize((width, height), Image.LANCZOS)
-
-    # Threshold map: dark = body char, bright = space
-    px       = img.load()
+    px       = gray.load()
     ramp_len = len(BODY_RAMP) - 1
     rows     = []
+
     for y in range(height):
         row = ""
         for x in range(width):
             b = px[x, y]
-            if b < THRESHOLD:
-                idx  = int(b / THRESHOLD * ramp_len)
-                row += BODY_RAMP[idx]
+            if b > BG_THRESHOLD:
+                row += " "                            # white background → blank
             else:
-                row += " "
+                # 0 (black shirt) → '$',  ~BG_THRESHOLD (skin edge) → '='
+                idx  = int(b / BG_THRESHOLD * ramp_len)
+                row += BODY_RAMP[idx]
         rows.append(html.escape(row))
     return rows
 
@@ -125,16 +128,18 @@ text, tspan {{white-space: pre;}}
 
 
 if __name__ == "__main__":
+    print(f"Loading {IMG_PATH} …")
     lines = build_ascii(IMG_PATH, W, H)
 
     sep = "+" + "-" * W + "+"
+    print(f"\nPreview ({H} lines x {W} chars):")
     print(sep)
     for ln in lines:
         print("|" + ln + "|")
     print(sep)
 
-    blank_rows = sum(1 for ln in lines if not ln.strip())
-    print(f"\n{blank_rows} fully-blank rows / {len(lines)} total")
+    blank = sum(1 for ln in lines if not ln.strip())
+    print(f"\nBlank rows: {blank}/{H}")
 
     for dark, fname in [(True,  r"d:\Mausam5055\dark_mode.svg"),
                         (False, r"d:\Mausam5055\light_mode.svg")]:
@@ -142,6 +147,4 @@ if __name__ == "__main__":
             f.write(make_svg(lines, dark=dark))
         print(f"✓ {fname}")
 
-    if os.path.exists(IMG_PATH):
-        os.remove(IMG_PATH)
     print("Done!")
