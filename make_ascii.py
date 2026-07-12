@@ -64,7 +64,7 @@ def build_ascii(img_path, width, height):
 
 
 def get_github_stats(username="Mausam5055"):
-    stats = {"repos": "79", "followers": "21", "stars": "0"}
+    stats = {"repos": "79", "followers": "21", "stars": "0", "commits": "--"}
     try:
         # Fetch user stats
         req = urllib.request.Request(f"https://api.github.com/users/{username}", headers={"User-Agent": "Mozilla/5.0"})
@@ -77,6 +77,12 @@ def get_github_stats(username="Mausam5055"):
         repos_data = json.loads(urllib.request.urlopen(req2).read())
         stars = sum(repo.get("stargazers_count", 0) for repo in repos_data)
         stats["stars"] = str(stars)
+        
+        # Fetch total commits
+        req3 = urllib.request.Request(f"https://api.github.com/search/commits?q=author:{username}&per_page=1", headers={"Accept": "application/vnd.github.cloak-preview", "User-Agent": "Mozilla/5.0"})
+        commits_data = json.loads(urllib.request.urlopen(req3).read())
+        if "total_count" in commits_data:
+            stats["commits"] = f"{commits_data['total_count']:,}"
     except Exception as e:
         print("Failed to fetch stats, using defaults:", e)
     return stats
@@ -139,7 +145,7 @@ text, tspan {{white-space: pre;}}
 <tspan x="390" y="410" class="cc">. </tspan>
 <tspan x="390" y="450">- GitHub Stats </tspan><tspan class="cc">-----------------------------------------------</tspan>
 <tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">{str(stats["repos"]).rjust(3)} {{Contributed: --}}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">{str(stats["stars"]).rjust(4)}</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">--</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">{str(stats["followers"]).rjust(4)}</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">{str(stats["commits"]).rjust(4)}</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">{str(stats["followers"]).rjust(4)}</tspan>
 <tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">--</tspan> ( <tspan class="addColor">--</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">--</tspan><tspan class="delColor">--</tspan> )
 </text>
 </svg>"""
