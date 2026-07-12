@@ -1,71 +1,74 @@
 """
-Clean ASCII-art to SVG generator.
-Strategy: resize the source image to (W × H) directly — PIL LANCZOS handles
-quality downsampling, and the chars' 2× height naturally compensates for the
-"squish", producing correct body proportions in the rendered SVG.
+Silhouette-only ASCII art generator for GitHub README SVG.
+Approach: THRESHOLD — dark pixels (person's body) → characters,
+           bright pixels (background) → pure SPACE (blank).
+Result: clean body outline, blank rest.
 """
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 import html, os, urllib.request
 
-# ── Download profile picture ──────────────────────────────────────────────────
+# ── Download profile picture ───────────────────────────────────────────────────
 IMG_URL  = "https://avatars.githubusercontent.com/u/104557109?v=4"
 IMG_PATH = r"d:\Mausam5055\profile_pic.jpg"
 if not os.path.exists(IMG_PATH):
     urllib.request.urlretrieve(IMG_URL, IMG_PATH)
     print("Downloaded profile picture")
 
-# ── Target ASCII grid ─────────────────────────────────────────────────────────
-# SVG: 985×530px, ASCII x=15..375 (360px / 9.6px/char = 37 chars),
-#       y from 30 to 510, step 20 → 25 lines
+# ── ASCII grid dimensions ──────────────────────────────────────────────────────
+# SVG: x=15..~375 → ~40 chars wide,  y=30..510 step=20 → 25 lines
 W, H = 40, 25
 
-# Dense → sparse  (dark pixel → dense char → appears bright on dark SVG bg)
-# SHORT ramp = clean, not noisy
-RAMP = "$@#%&W*o+=;:,. "   # 15 chars: 0=densest, 14=space
+# ── Threshold settings ────────────────────────────────────────────────────────
+# pixels with brightness < THRESHOLD  →  body  →  gets a char
+# pixels with brightness >= THRESHOLD →  background  →  pure space
+THRESHOLD = 155      # tune: raise to capture more skin/face, lower to tighten
 
-# ── Image processing ──────────────────────────────────────────────────────────
+# Chars used ONLY for the person zone  (dense=very dark, light=slightly dark)
+BODY_RAMP = "$@#%&W*o+="   # 10 chars
+
+
 def build_ascii(img_path, width, height):
     img = Image.open(img_path).convert("L")
     iw, ih = img.size
 
-    # 1. Crop: skip the noisy venue ceiling/lights at the top (~12%),
-    #    also trim 2% sides/bottom to remove border artefacts.
-    top    = int(ih * 0.12)   # ← KEY FIX: cuts the bright ceiling lights
-    bottom = int(ih * 0.98)
-    left   = int(iw * 0.03)
-    right  = int(iw * 0.97)
-    img = img.crop((left, top, right, bottom))
+    # 1. Crop — skip noisy venue ceiling (top 12%) and trim 3% sides/bottom
+    img = img.crop((int(iw * 0.03), int(ih * 0.12),
+                    int(iw * 0.97), int(ih * 0.98)))
 
-    # 2. Heavy pre-blur at full res BEFORE downscale to kill background noise
-    img = img.filter(ImageFilter.GaussianBlur(radius=4))
+    # 2. Median filter first — kills point-noise (chair legs, lights, etc.)
+    img = img.filter(ImageFilter.MedianFilter(size=3))
 
-    # 3. Stretch histogram — makes dark shirt black, bright bg white
-    img = ImageOps.autocontrast(img, cutoff=3)
+    # 3. Heavy Gaussian blur — merges background details into smooth bright mass
+    img = img.filter(ImageFilter.GaussianBlur(radius=5))
 
-    # 4. Strong contrast + darken so body/shirt dominates
-    img = ImageEnhance.Contrast(img).enhance(2.5)
-    img = ImageEnhance.Brightness(img).enhance(0.75)
+    # 4. Autocontrast — dark shirt stretches to near-0, bright bg to near-255
+    img = ImageOps.autocontrast(img, cutoff=2)
 
-    # 5. Resize directly to (W, H) — every output row is unique (no duplicates)
+    # 5. Extra contrast + darken — sharpens person vs background boundary
+    img = ImageEnhance.Contrast(img).enhance(2.8)
+    img = ImageEnhance.Brightness(img).enhance(0.78)
+
+    # 6. Resize to grid (each pixel → one ASCII char, no duplicate rows)
     img = img.resize((width, height), Image.LANCZOS)
 
-    # 6. Light unsharp mask to re-crisp edges after downscale
-    img = img.filter(ImageFilter.UnsharpMask(radius=1, percent=100, threshold=3))
-
-    # 7. Map pixel → char
+    # 7. Threshold map
     px       = img.load()
-    ramp_len = len(RAMP) - 1
+    ramp_len = len(BODY_RAMP) - 1
     rows     = []
     for y in range(height):
         row = ""
         for x in range(width):
-            idx  = int(px[x, y] / 255 * ramp_len)
-            row += RAMP[idx]
+            b = px[x, y]
+            if b < THRESHOLD:
+                # Scale 0..THRESHOLD-1  →  BODY_RAMP index
+                idx  = int(b / THRESHOLD * ramp_len)
+                row += BODY_RAMP[idx]
+            else:
+                row += " "   # background = blank
         rows.append(html.escape(row))
     return rows
 
 
-# ── SVG builder ───────────────────────────────────────────────────────────────
 def make_svg(ascii_lines, dark=True):
     bg    = "#161b22" if dark else "#f6f8fa"
     fg    = "#c9d1d9" if dark else "#24292f"
@@ -133,20 +136,26 @@ text, tspan {{white-space: pre;}}
 if __name__ == "__main__":
     lines = build_ascii(IMG_PATH, W, H)
 
-    print(f"Preview ({len(lines)} lines × {len(lines[0])} chars):\n")
+    # Terminal preview
+    print(f"Preview ({len(lines)} lines x {len(lines[0])} chars)\n")
     sep = "+" + "-" * len(lines[0]) + "+"
     print(sep)
     for ln in lines:
         print("|" + ln + "|")
     print(sep)
 
+    # Count how many rows have any body chars (sanity check)
+    filled = sum(1 for ln in lines if ln.strip())
+    print(f"\n{filled}/{len(lines)} rows contain body chars")
+
+    # Write SVGs
     for dark, fname in [(True,  r"d:\Mausam5055\dark_mode.svg"),
                         (False, r"d:\Mausam5055\light_mode.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_svg(lines, dark=dark))
         mode = "dark" if dark else "light"
-        print(f"\n✓ Written {mode}_mode.svg")
+        print(f"✓ Written {mode}_mode.svg")
 
     if os.path.exists(IMG_PATH):
         os.remove(IMG_PATH)
-    print("\nDone!")
+    print("Done!")
