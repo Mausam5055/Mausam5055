@@ -62,8 +62,7 @@
 # 📊 GitHub Stats:
 <img align="right" height="200" src="https://i.imgflip.com/65efzo.gif" />
 
-<img src="https://github-readme-stats.vercel.app/api?username=Mausam5055&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" /><br/>
-<img src="https://nirzak-streak-stats.vercel.app/?user=Mausam5055&theme=radical&hide_border=true" alt="GitHub Streak" /> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mausam5055&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Langs" /><br/>
+
 
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mausam5055&radius=16&theme=react-dark&area=true&order=4" height="300" alt="activity-graph graph" />
