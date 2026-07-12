@@ -6,6 +6,7 @@
 </a>
 
 
+<!-- 🚀 What I Do — commented out, uncomment to restore
 ### 🚀 **What I Do**
 <div align="left" style="font-size: 1.1em; line-height: 1.8;">
   
@@ -21,6 +22,7 @@
 | **⚡ Fun Fact** | Always exploring new technologies and building cool projects! |
 
 </div>
+-->
 
 <br>
 
