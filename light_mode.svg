@@ -8,46 +8,46 @@ font-display: swap;
 -webkit-size-adjust: 109%;
 size-adjust: 109%;
 }
-.key {fill: #953800;}
+.key   {fill: #953800;}
 .value {fill: #0a3069;}
 .addColor {fill: #1a7f37;}
 .delColor {fill: #cf222e;}
-.cc {fill: #c2cfde;}
+.cc    {fill: #c2cfde;}
 text, tspan {white-space: pre;}
 </style>
 <rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
-<text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30">d0XUfZxxncX\c\U{ctXxXtrx[f[c+f?|/~x(\j~r[?</tspan>
-<tspan x="15" y="50">$W$$$h%&amp;hQpdCQZmnQjX1X{Y\C)c)c)j]x{t1/[ttt</tspan>
-<tspan x="15" y="70">$$$$$$$$$$$$@%$$dqZpZQOOm@B0paoXmomOw#YwW#</tspan>
-<tspan x="15" y="90">$$$$$$$$$$$$$$$W8Wbdbh8b%$$$$$$$$$$$$$$$$$</tspan>
-<tspan x="15" y="110">&amp;W$$$$$$$$$$$$$$#Y(&lt;~[OoB$$$$$$$$$$$$$$$$$</tspan>
-<tspan x="15" y="130">OC%$$$$$$$$$$$$8X0O(ZCud$$@8$@#$$$$$$$$$$$</tspan>
-<tspan x="15" y="150">LL#$$$$hb8@MMBB*t(zjY\}v@$$$$WwB$$$$$$$$$$</tspan>
-<tspan x="15" y="170">XJ*wwpk[]uX??J}iCwQZJQQw$$%&amp;WM*W8@B$$$$$$$</tspan>
-<tspan x="15" y="190">-|JXUXn/ij{:!t][m#aah80b$$b#ZZhoMbtxbdYYW$</tspan>
-<tspan x="15" y="210">^!({&gt;:~]&gt;{/!:]1xp0o##wzmqMZMx~{|/(]l\-]i/m</tspan>
-<tspan x="15" y="230">;:[f|:-X[l/_{rLb%X)ux?vqYQYJY{_\.;&gt;&gt;:I-&gt;!l</tspan>
-<tspan x="15" y="250">:^,!l&lt;li~:ndhh##%kv1-cdModk*aXI,:l&quot;&quot;&quot;&#x27;\l&gt;,</tspan>
-<tspan x="15" y="270"> &quot;I,I:^liid%BB&amp;&amp;&amp;Y$%#vm8*#B%*wl&quot;`^  `,` ,,</tspan>
-<tspan x="15" y="290">Il::i^ &quot;\|%8@$$@@0q@Oj8#*8BM*a?&#x27;.\.&#x27;&#x27;..&#x27;&#x27;&#x27;</tspan>
-<tspan x="15" y="310">;l!l,. .&#x27;U%8%@$B@%w$Qb$&amp;d@@Mhh] &#x27;^.^:`,;::</tspan>
-<tspan x="15" y="330">^i&lt;,:&#x27;`,,pM&amp;$$$$$$o#b$$$$$L_!t).&quot;` .^&gt;,\&gt;!</tspan>
-<tspan x="15" y="350">&#x27;l+&gt;+^&quot;.}\!&lt;xkC1&lt;~_&lt;_{[]-+&quot;  &lt;l`&quot;`  .&lt;][f]</tspan>
-<tspan x="15" y="370">.I,1-,&quot; &gt;i,&#x27;:;`i1{}}?+~~~~+&lt;{&lt; &#x27;`.&#x27;&quot;&#x27;!+{Un</tspan>
-<tspan x="15" y="390">.::1:I`.,}_~+_-&lt;i+{uOLLOZqbpx^.&#x27;&quot;..&#x27;&#x27;~&quot;:(\</tspan>
-<tspan x="15" y="410">.&quot;,I:l&#x27;&#x27;&#x27;[QC0000QQLJvhW%Mobo:  ``   &#x27;_\Il;</tspan>
-<tspan x="15" y="430">.   .    .&quot;w$@amoQv{_$$$$$@$] .&#x27;^`^`&#x27;l   .</tspan>
-<tspan x="15" y="450">   .    . &quot;W$M]I&lt;lmM&amp;$$$$$$${ &#x27;  ..&#x27;..&#x27;.&#x27;`</tspan>
-<tspan x="15" y="470">        &#x27; /$$8kQjq$$$$$$$$$$_ .           </tspan>
-<tspan x="15" y="490">        &#x27; c$@$$$$$$$$$$$$$$@! .           </tspan>
-<tspan x="15" y="510">        . w$$$$$$$$$$$$$$$$$&lt; .           </tspan>
+<text x="15" y="30" fill="#24292f">
+<tspan x="15" y="30">#@####%#%&amp;%W&amp;W&amp;*WWW***o*o*+o+++o+o;o+o+o</tspan>
+<tspan x="15" y="50">#@####%#%&amp;%W&amp;W&amp;*WWW***o*o*+o+++o+o;o+o+o</tspan>
+<tspan x="15" y="70">$$$$$$$$$$$$$$$$$##%#@#$$@@@##@#@@#@$@#@</tspan>
+<tspan x="15" y="90">$$$$$$$$$$$$$$$$$##%#@#$$@@@##@#@@#@$@#@</tspan>
+<tspan x="15" y="110">$$$@$$$$$$$$$$$$%&amp;*WW%$$$$$$$$$$$$$$$$$$</tspan>
+<tspan x="15" y="130">$$$@$$$$$$$$$$$$%&amp;*WW%$$$$$$$$$$$$$$$$$$</tspan>
+<tspan x="15" y="150">%&amp;W&amp;@###W*%W+&amp;**%#@@#%$$$$@$$$$#@$@@$$$$</tspan>
+<tspan x="15" y="170">%&amp;W&amp;@###W*%W+&amp;**%#@@#%$$$$@$$$$#@$@@$$$$</tspan>
+<tspan x="15" y="190">+;::oo;;*++o;*W#$%%%&amp;#@@#@Woooo;;;+;oWW&amp;</tspan>
+<tspan x="15" y="210">+;::oo;;*++o;*W#$%%%&amp;#@@#@Woooo;;;+;oWW&amp;</tspan>
+<tspan x="15" y="230">:::::;::;;o$$$$$@##&amp;&amp;$$$$$$W,,:::::::,,:</tspan>
+<tspan x="15" y="250">:::::;::;;o$$$$$@##&amp;&amp;$$$$$$W,,:::::::,,:</tspan>
+<tspan x="15" y="270">*o;;;::::;@$$$$$$@$@@$$$@%%&amp;::::::::;;;;</tspan>
+<tspan x="15" y="290">*o;;;::::;@$$$$$$@$@@$$$@%%&amp;::::::::;;;;</tspan>
+<tspan x="15" y="310">*o;;;::::;@$$$$$$@$@@$$$@%%&amp;::::::::;;;;</tspan>
+<tspan x="15" y="330">&amp;+::;o:::+o;+*oooo******o;;;::::::;oW**+</tspan>
+<tspan x="15" y="350">&amp;+::;o:::+o;+*oooo******o;;;::::::;oW**+</tspan>
+<tspan x="15" y="370">:::::;::::+*&amp;&amp;&amp;&amp;&amp;WWW@@$$$@+,:::::;::+;o+</tspan>
+<tspan x="15" y="390">:::::;::::+*&amp;&amp;&amp;&amp;&amp;WWW@@$$$@+,:::::;::+;o+</tspan>
+<tspan x="15" y="410">::::::::::,&amp;$$%WW#@@$$$$$$;:::::::::,:+:</tspan>
+<tspan x="15" y="430">::::::::::,&amp;$$%WW#@@$$$$$$;:::::::::,:+:</tspan>
+<tspan x="15" y="450">::::::::::;$$$$$$$$$$$$$$$;:::::::::::::</tspan>
+<tspan x="15" y="470">::::::::::;$$$$$$$$$$$$$$$;:::::::::::::</tspan>
+<tspan x="15" y="490">:::::::::,*$$$$$$$$$$$$$$$o,::::::::::::</tspan>
+<tspan x="15" y="510">:::::::::,*$$$$$$$$$$$$$$$o,::::::::::::</tspan>
 </text>
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">mausam@github</tspan> -———————————————————————————————————————————-—-
-<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Windows 11, Android, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">Assam, India 🇮🇳</tspan>
-<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">University</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">VIT Bhopal University</tspan>
+<tspan x="390" y="50"  class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Windows 11, Android, Linux</tspan>
+<tspan x="390" y="70"  class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">Assam, India &#x1F1EE;&#x1F1F3;</tspan>
+<tspan x="390" y="90"  class="cc">. </tspan><tspan class="key">University</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">VIT Bhopal University</tspan>
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">VSCode 1.96.0, Cursor AI</tspan>
 <tspan x="390" y="130" class="cc">. </tspan>
 <tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Python, Java, JavaScript, C++</tspan>
@@ -57,7 +57,7 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Interests</tspan>.<tspan class="key">Dev</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Full-Stack, AI/ML, Open Source</tspan>
 <tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Interests</tspan>.<tspan class="key">Tech</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">Cloud Computing, Emerging Tech</tspan>
 <tspan x="390" y="270" class="cc">. </tspan>
-<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Bio</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">Learn to remove &apos;L&apos; 🏆</tspan>
+<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Bio</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">Learn to remove &apos;L&apos; &#x1F3C6;</tspan>
 <tspan x="390" y="310">- Contact</tspan> -——————————————————————————————————————————————-—-
 <tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">rikikumkar@gmail.com</tspan>
 <tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">mausam04.vercel.app</tspan>
