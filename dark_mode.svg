@@ -46,28 +46,28 @@ text, tspan {white-space: pre;}
 </text>
 <text x="390" y="30" fill="#c9d1d9">
 <tspan x="390" y="30">mausam@github</tspan> <tspan class="cc">----------------------------------------------------</tspan>
-<tspan x="390" y="50"  class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan x="960" text-anchor="end" class="value">Windows 11, Android, Linux</tspan>
-<tspan x="390" y="70"  class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan x="960" text-anchor="end" class="value">Assam, India &#x1F1EE;&#x1F1F3;</tspan>
-<tspan x="390" y="90"  class="cc">. </tspan><tspan class="key">University</tspan>:<tspan x="960" text-anchor="end" class="value">VIT Bhopal University</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan x="960" text-anchor="end" class="value">VSCode 1.96.0, Cursor AI</tspan>
+<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Windows 11, Android, Linux</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ............................... </tspan><tspan class="value">Assam, India &#x1F1EE;&#x1F1F3;</tspan>
+<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">University</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">VIT Bhopal University</tspan>
+<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">VSCode 1.96.0, Cursor AI</tspan>
 <tspan x="390" y="130" class="cc">. </tspan>
-<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan x="960" text-anchor="end" class="value">Python, Java, JavaScript, C++</tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Web</tspan>:<tspan x="960" text-anchor="end" class="value">HTML, CSS, React, Node.js</tspan>
-<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Data</tspan>:<tspan x="960" text-anchor="end" class="value">SQL, MongoDB, JSON, YAML</tspan>
+<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages.Programming</tspan>:<tspan class="cc"> ....... </tspan><tspan class="value">Python, Java, JavaScript, C++</tspan>
+<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages.Web</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">HTML, CSS, React, Node.js</tspan>
+<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages.Data</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">SQL, MongoDB, JSON, YAML</tspan>
 <tspan x="390" y="210" class="cc">. </tspan>
-<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Interests</tspan>.<tspan class="key">Dev</tspan>:<tspan x="960" text-anchor="end" class="value">Full-Stack, AI/ML, Open Source</tspan>
-<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Interests</tspan>.<tspan class="key">Tech</tspan>:<tspan x="960" text-anchor="end" class="value">Cloud Computing, Emerging Tech</tspan>
+<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Interests.Dev</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Full-Stack, AI/ML, Open Source</tspan>
+<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Interests.Tech</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">Cloud Computing, Emerging Tech</tspan>
 <tspan x="390" y="270" class="cc">. </tspan>
-<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Bio</tspan>:<tspan x="960" text-anchor="end" class="value">Learn to remove &apos;L&apos; &#x1F3C6;</tspan>
-<tspan x="390" y="310" class="key">Contact</tspan> <tspan class="cc">----------------------------------------------------------</tspan>
-<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan x="960" text-anchor="end" class="value">rikikumkar@gmail.com</tspan>
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan x="960" text-anchor="end" class="value">mausam04.vercel.app</tspan>
-<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan x="960" text-anchor="end" class="value">mausam-kar</tspan>
-<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan x="960" text-anchor="end" class="value">Mausam5055</tspan>
+<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Bio</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">Learn to remove &apos;L&apos; &#x1F3C6;</tspan>
+<tspan x="390" y="310">- Contact </tspan><tspan class="cc">----------------------------------------------------</tspan>
+<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email.Personal</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">rikikumkar@gmail.com</tspan>
+<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Portfolio</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">mausam04.vercel.app</tspan>
+<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">mausam-kar</tspan>
+<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">GitHub</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">Mausam5055</tspan>
 <tspan x="390" y="410" class="cc">. </tspan>
-<tspan x="390" y="450" class="key">GitHub Stats</tspan> <tspan class="cc">-----------------------------------------------------</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan x="960" text-anchor="end" class="value">79</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Stars</tspan>:<tspan x="960" text-anchor="end" class="value">414</tspan>
-<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Followers</tspan>:<tspan x="960" text-anchor="end" class="value">21</tspan>
+<tspan x="390" y="450">- GitHub Stats </tspan><tspan class="cc">-----------------------------------------------</tspan>
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value"> 79 {Contributed: --}</tspan> <tspan class="cc">| </tspan><tspan class="key">Stars</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value"> 414</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">--</tspan> <tspan class="cc">| </tspan><tspan class="key">Followers</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">  21</tspan>
+<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc">. </tspan><tspan class="value">--</tspan> ( <tspan class="addColor">--</tspan><tspan class="addColor">++</tspan>, <tspan class="cc"> </tspan><tspan class="delColor">--</tspan><tspan class="delColor">--</tspan> )
 </text>
 </svg>
