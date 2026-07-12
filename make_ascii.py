@@ -265,6 +265,77 @@ text, tspan {{white-space: pre;}}
 </text>
 </svg>"""
 
+def make_about_svg(dark=True):
+    bg    = "#161b22" if dark else "#f6f8fa"
+    fg    = "#c9d1d9" if dark else "#24292f"
+    key_c = "#ffa657" if dark else "#953800"
+    val_c = "#a5d6ff" if dark else "#0a3069"
+    cc_c  = "#616e7f" if dark else "#c2cfde"
+
+    paragraphs = [
+        "Tech-focused engineer passionate about building scalable, high-performance systems and modern web experiences. I work across the stack — from crafting smooth, interactive UIs using GSAP and modern frontend tools to designing robust backend systems powered by Go, Node.js, PostgreSQL, and distributed architectures.",
+        "",
+        "With strong foundations in system design, DBMS, and DevOps, I’ve built and experimented with microservices, cloud deployments, and automation workflows that solve real-world problems at scale. I’m particularly interested in AI/ML, backend infrastructure, and intelligent systems, constantly exploring how these domains intersect to create efficient and resilient products.",
+        "",
+        "Technical Focus:",
+        " • Full-Stack Development (React, Node.js, Tailwind)",
+        " • Backend & Distributed Systems (Go, Redis, Microservices)",
+        " • Web Animations & Modern UI (GSAP, Lenis)",
+        " • AI/ML, NLP, Python",
+        " • System Design & Databases",
+        "",
+        "Currently diving deeper into cloud computing (AWS/GCP), DevOps, and advanced analytics, aiming to build production-grade systems that are scalable, efficient, and reliable.",
+        "",
+        "I enjoy hackathons, open-source, and experimental projects that push me beyond comfort zones — combining creativity with solid engineering principles."
+    ]
+
+    tspans = f'<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ About Me ]-----------------------------------------------</tspan>\n'
+    
+    y_pos = 60
+    for p in paragraphs:
+        if not p.strip():
+            y_pos += 20
+            continue
+        
+        if p.startswith(" •"):
+            wrapped = [p]
+        elif p == "Technical Focus:":
+            wrapped = [p]
+        else:
+            wrapped = textwrap.wrap(p, width=85)
+            
+        for line in wrapped:
+            if line.startswith(" •"):
+                tspans += f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="key">{html.escape(line)}</tspan>\n'
+            elif line == "Technical Focus:":
+                tspans += f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="key">{html.escape(line)}</tspan>\n'
+            else:
+                tspans += f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="value">{html.escape(line)}</tspan>\n'
+            y_pos += 22
+
+    total_height = y_pos + 20
+
+    return f"""<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="{total_height}px" font-size="16px">
+<style>
+@font-face {{
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}}
+.key   {{fill: {key_c};}}
+.value {{fill: {val_c};}}
+.cc    {{fill: {cc_c};}}
+text, tspan {{white-space: pre;}}
+</style>
+<rect width="800px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<text x="20" y="30" fill="{fg}">
+{tspans}
+</text>
+</svg>"""
+
 if __name__ == "__main__":
     print(f"Loading {IMG_PATH} …")
     lines = build_ascii(IMG_PATH, W, H)
@@ -299,6 +370,12 @@ if __name__ == "__main__":
                         (False, r"d:\Mausam5055\hackatime_light_v1.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_hackatime_svg(dark=dark))
+        print(f"✓ {fname}")
+        
+    for dark, fname in [(True,  r"d:\Mausam5055\about_dark_v1.svg"),
+                        (False, r"d:\Mausam5055\about_light_v1.svg")]:
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(make_about_svg(dark=dark))
         print(f"✓ {fname}")
 
     print("Done!")
