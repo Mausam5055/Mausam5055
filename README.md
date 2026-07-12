@@ -5,12 +5,6 @@
   </picture>
 </a>
 
-### ✍️ Random Dev Quote
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./quote_dark_v1.svg">
-  <img alt="Random Dev Quote" src="./quote_light_v1.svg">
-</picture>
-
 
 <!-- 🚀 What I Do — commented out, uncomment to restore
 ### 🚀 **What I Do**
@@ -80,6 +74,13 @@
 
 </div>
 
+### ✍️ Random Dev Quote
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./quote_dark_v1.svg">
+    <img alt="Random Dev Quote" src="./quote_light_v1.svg">
+  </picture>
+</div>
 
 
 
