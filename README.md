@@ -1,7 +1,7 @@
 <a href="https://github.com/Mausam5055/Mausam5055">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode_v2.svg">
-    <img alt="Mausam Kar's GitHub Profile README" src="./light_mode_v2.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode_v3.svg">
+    <img alt="Mausam Kar's GitHub Profile README" src="./light_mode_v3.svg">
   </picture>
 </a>
 

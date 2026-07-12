@@ -169,8 +169,8 @@ if __name__ == "__main__":
     stats = get_github_stats()
     print(f"Stats loaded: {stats}")
 
-    for dark, fname in [(True,  r"d:\Mausam5055\dark_mode_v2.svg"),
-                        (False, r"d:\Mausam5055\light_mode_v2.svg")]:
+    for dark, fname in [(True,  r"d:\Mausam5055\dark_mode_v3.svg"),
+                        (False, r"d:\Mausam5055\light_mode_v3.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_svg(lines, stats, dark=dark))
         print(f"✓ {fname}")
