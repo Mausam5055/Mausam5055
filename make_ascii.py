@@ -102,6 +102,17 @@ def get_github_stats(username="Mausam5055"):
         print("Failed to fetch stats, using defaults:", e)
     return stats
 
+def get_top_repos(username="Mausam5055", limit=4):
+    try:
+        req = urllib.request.Request(f"https://api.github.com/users/{username}/repos?sort=pushed&per_page=30", headers={"User-Agent": "Mozilla/5.0"})
+        repos = json.loads(urllib.request.urlopen(req).read())
+        # Filter out forks and take top ones
+        repos = [r for r in repos if not r.get("fork")]
+        return repos[:limit]
+    except Exception as e:
+        print("Failed to fetch repos for projects:", e)
+        return []
+
 def make_svg(ascii_lines, stats, dark=True):
     bg    = "#161b22" if dark else "#f6f8fa"
     fg    = "#c9d1d9" if dark else "#24292f"
@@ -245,7 +256,7 @@ def make_hackatime_svg(dark=True):
     total_height = y_pos + 20
 
     return f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="{total_height}px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="550px" height="{total_height}px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -259,7 +270,7 @@ size-adjust: 109%;
 .cc    {{fill: {cc_c};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="800px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<rect width="550px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
 <text x="20" y="30" fill="{fg}">
 {tspans}
 </text>
@@ -336,6 +347,69 @@ text, tspan {{white-space: pre;}}
 </text>
 </svg>"""
 
+def make_projects_svg(repos, dark=True):
+    bg    = "#161b22" if dark else "#f6f8fa"
+    fg    = "#c9d1d9" if dark else "#24292f"
+    key_c = "#ffa657" if dark else "#953800"
+    val_c = "#a5d6ff" if dark else "#0a3069"
+    add_c = "#3fb950" if dark else "#1a7f37"
+    cc_c  = "#616e7f" if dark else "#c2cfde"
+
+    tspans = f'<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Top Projects &amp; Repositories ]----------------------</tspan>\n'
+    
+    y_pos = 60
+    
+    if not repos:
+        tspans += f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="value">No public repositories found.</tspan>\n'
+        y_pos += 24
+    else:
+        for repo in repos:
+            name = repo.get("name", "Unknown")
+            desc = repo.get("description", "") or "No description provided."
+            lang = repo.get("language", "") or "Unknown"
+            stars = repo.get("stargazers_count", 0)
+            forks = repo.get("forks_count", 0)
+            size_kb = repo.get("size", 0)
+            size_mb = round(size_kb / 1024, 1) if size_kb > 1024 else f"{size_kb}KB"
+            size_str = f"{size_mb}MB" if isinstance(size_mb, float) else size_mb
+            
+            wrapped_desc = textwrap.wrap(desc, width=70)
+            
+            tspans += f'<tspan x="20" y="{y_pos}" class="cc">. </tspan><tspan class="add">📦 {html.escape(name)}</tspan>\n'
+            y_pos += 22
+            
+            for line in wrapped_desc:
+                tspans += f'<tspan x="20" y="{y_pos}" class="cc">.    </tspan><tspan class="value">{html.escape(line)}</tspan>\n'
+                y_pos += 22
+                
+            stats_line = f"🌟 {stars} Stars  |  🍴 {forks} Forks  |  📏 {size_str}  |  💻 {lang}"
+            tspans += f'<tspan x="20" y="{y_pos}" class="cc">.    </tspan><tspan class="key">{html.escape(stats_line)}</tspan>\n'
+            y_pos += 30
+
+    total_height = max(y_pos + 10, 200)
+
+    return f"""<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="{total_height}px" font-size="16px">
+<style>
+@font-face {{
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}}
+.key   {{fill: {key_c};}}
+.value {{fill: {val_c};}}
+.add   {{fill: {add_c};}}
+.cc    {{fill: {cc_c};}}
+text, tspan {{white-space: pre;}}
+</style>
+<rect width="800px" height="{total_height}px" fill="{bg}" rx="10" stroke="{cc_c}" stroke-width="1"/>
+<text x="20" y="30" fill="{fg}">
+{tspans}
+</text>
+</svg>"""
+
 if __name__ == "__main__":
     print(f"Loading {IMG_PATH} …")
     lines = build_ascii(IMG_PATH, W, H)
@@ -376,6 +450,14 @@ if __name__ == "__main__":
                         (False, r"d:\Mausam5055\about_light_v1.svg")]:
         with open(fname, "w", encoding="utf-8") as f:
             f.write(make_about_svg(dark=dark))
+        print(f"✓ {fname}")
+        
+    print("\nFetching Top Repos...")
+    top_repos = get_top_repos()
+    for dark, fname in [(True,  r"d:\Mausam5055\projects_dark_v1.svg"),
+                        (False, r"d:\Mausam5055\projects_light_v1.svg")]:
+        with open(fname, "w", encoding="utf-8") as f:
+            f.write(make_projects_svg(top_repos, dark=dark))
         print(f"✓ {fname}")
 
     print("Done!")

@@ -55,6 +55,21 @@
 
 <br>
 
+### 📂 Top Projects
+<table align="center" style="border: none;">
+  <tr>
+    <td width="300" valign="top">
+      <img src="https://i.postimg.cc/Hs3ghRR5/stack.jpg" width="100%" alt="Profile Illustration" style="border-radius: 10px;" />
+    </td>
+    <td width="800" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./projects_dark_v1.svg">
+        <img alt="Top Projects" src="./projects_light_v1.svg">
+      </picture>
+    </td>
+  </tr>
+</table>
+
 ### ⏱️ Hackatime Stats
 <div align="center">
   <picture>
