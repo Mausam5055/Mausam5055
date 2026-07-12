@@ -55,14 +55,6 @@
 
 <br>
 
-### 🧑‍💻 About Me
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./about_dark_v1.svg">
-    <img alt="About Me" src="./about_light_v1.svg">
-  </picture>
-</div>
-
 ### ⏱️ Hackatime Stats
 <div align="center">
   <picture>
