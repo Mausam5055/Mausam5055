@@ -10,12 +10,12 @@ skills = [
     "npm", "postgres", "opencv", "r", "ubuntu", "aws", "svelte", "solidity", "tensorflow", "terraform"
 ]
 
-# New cloud, system design, and extra skills (21 icons). 
-# Pandas and Numpy were replaced with Sass and Powershell because they weren't loading.
+# New cloud, system design, and extra skills (25 icons). 
+# Added a few more to reach 84 total icons so we can make a perfect 12x7 grid.
 new_skills = [
     "azure", "grafana", "prometheus", "kubernetes", "linux", "nginx", "redis", "kafka", 
     "sqlite", "notion", "rust", "go", "cpp", "c", "sass", "powershell", "github", 
-    "cloudflare", "windows", "raspberrypi", "vim"
+    "cloudflare", "windows", "raspberrypi", "vim", "postman", "webpack", "babel", "jest"
 ]
 
 # Combine and remove duplicates while preserving order
@@ -23,21 +23,22 @@ all_skills = []
 for s in skills + new_skills:
     if s not in all_skills:
         all_skills.append(s)
-# Total is exactly 80 icons.
+# Total is exactly 84 icons.
 
 lines = []
-# Changed to 16 icons per row to stretch the table wider and occupy left/right spaces!
-for i in range(0, len(all_skills), 16):
-    row_skills = all_skills[i:i+16]
-    cells = [f'<img src="https://skillicons.dev/icons?i={s}&theme=dark" />' for s in row_skills]
+# 12 icons per row keeps them a great size while being wide enough to occupy left/right spaces!
+for i in range(0, len(all_skills), 12):
+    row_skills = all_skills[i:i+12]
+    # Explicitly set width to keep them nicely sized
+    cells = [f'<img src="https://skillicons.dev/icons?i={s}&theme=dark" width="60" />' for s in row_skills]
     # Pad just in case it doesn't divide evenly
-    while len(cells) < 16:
+    while len(cells) < 12:
         cells.append("&nbsp;")
     lines.append("| " + " | ".join(cells) + " |")
     
     # After the first row, add the markdown header separator
     if i == 0:
-        lines.append("|" + "|".join([":---:"] * 16) + "|")
+        lines.append("|" + "|".join([":---:"] * 12) + "|")
 
 table_str = "\n".join(lines)
 
