@@ -1,7 +1,3 @@
-imes arwe not shown ...fix
-
-i
-
 <div align="center">
   <img src="https://i.postimg.cc/ncJ7vwqH/footer.gif" width="100%" alt="Header Animation" />
 </div>
@@ -36,6 +32,10 @@ i
 ## 💀 Skills &amp; Stacks
 
 <div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,java,cpp,html,css,js,mysql,nodejs,react,express,mongodb,vscode,github,git,linux,windows,postman" />
+  </a>
+</div>
 
 <br>
 
