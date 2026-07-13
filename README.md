@@ -32,7 +32,8 @@
 ## 💀 Skills &amp; Stacks
 
 <div align="center">
-  | | | | | | | | | | |
+
+| | | | | | | | | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | <img src="https://skillicons.dev/icons?i=html&theme=dark" /> | <img src="https://skillicons.dev/icons?i=css&theme=dark" /> | <img src="https://skillicons.dev/icons?i=js&theme=dark" /> | <img src="https://skillicons.dev/icons?i=ts&theme=dark" /> | <img src="https://skillicons.dev/icons?i=react&theme=dark" /> | <img src="https://skillicons.dev/icons?i=threejs&theme=dark" /> | <img src="https://skillicons.dev/icons?i=p5js&theme=dark" /> | <img src="https://skillicons.dev/icons?i=express&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vite&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vercel&theme=dark" /> |
 | <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" /> | <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" /> | <img src="https://skillicons.dev/icons?i=firebase&theme=dark" /> | <img src="https://skillicons.dev/icons?i=supabase&theme=dark" /> | <img src="https://skillicons.dev/icons?i=mysql&theme=dark" /> | <img src="https://skillicons.dev/icons?i=java&theme=dark" /> | <img src="https://skillicons.dev/icons?i=figma&theme=dark" /> | <img src="https://skillicons.dev/icons?i=obsidian&theme=dark" /> | <img src="https://skillicons.dev/icons?i=prisma&theme=dark" /> | <img src="https://skillicons.dev/icons?i=vue&theme=dark" /> |
