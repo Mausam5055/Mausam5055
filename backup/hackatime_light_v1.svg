@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1100px" height="344px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key   {fill: #953800;}
+.value {fill: #0a3069;}
+.cc    {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="1100px" height="344px" fill="#f6f8fa" rx="10" stroke="#c2cfde" stroke-width="1"/>
+<text x="20" y="30" fill="#24292f">
+<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Hackatime Stats ]----------------------------------------</tspan>
+<tspan x="20" y="60" class="cc">. </tspan><tspan class="key">TypeScript</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value"> 75h 55m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Python</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value"> 42h 58m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">C#</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value"> 30h 15m</tspan>
+<tspan x="20" y="84" class="cc">. </tspan><tspan class="key">Text</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value"> 33h 44m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">JavaScript</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value"> 14h 39m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">PHP</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value"> 12h 40m</tspan>
+<tspan x="20" y="108" class="cc">. </tspan><tspan class="key">Other</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">  9h 12m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">JSON</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">  6h 24m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Ruby</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">  8h 22m</tspan>
+<tspan x="20" y="132" class="cc">. </tspan><tspan class="key">Markdown</tspan>:<tspan class="cc"> ....... </tspan><tspan class="value">  5h 50m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">CSS</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">  3h 46m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Rust</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">  7h 10m</tspan>
+<tspan x="20" y="156" class="cc">. </tspan><tspan class="key">Shell</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">  1h 54m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">INI</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">  1h 17m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Dart</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">  5h 05m</tspan>
+<tspan x="20" y="180" class="cc">. </tspan><tspan class="key">SQL</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">  1h 12m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">JSX</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">     28m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Swift</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">  4h 12m</tspan>
+<tspan x="20" y="204" class="cc">. </tspan><tspan class="key">Batchfile</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">     26m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">HTML</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">     23m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Kotlin</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">  3h 50m</tspan>
+<tspan x="20" y="228" class="cc">. </tspan><tspan class="key">TOML</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">     21m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">YAML</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">     20m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Scala</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">  2h 30m</tspan>
+<tspan x="20" y="252" class="cc">. </tspan><tspan class="key">XML</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">     14m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">C++</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">     11m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Elixir</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">  1h 45m</tspan>
+<tspan x="20" y="276" class="cc">. </tspan><tspan class="key">PowerShell</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">     10m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Go</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">      6m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Lua</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">  1h 20m</tspan>
+<tspan x="20" y="300" class="cc">. </tspan><tspan class="key">Java</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">      4m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Docker</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">      2m</tspan>    <tspan class="cc">|    </tspan><tspan class="key">Obj-C</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">     45m</tspan>
+
+</text>
+</svg>

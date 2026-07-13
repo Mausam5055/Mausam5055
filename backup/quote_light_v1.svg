@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="124px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key   {fill: #953800;}
+.value {fill: #0a3069;}
+.cc    {fill: #c2cfde;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="800px" height="124px" fill="#f6f8fa" rx="10" stroke="#c2cfde" stroke-width="1"/>
+<text x="20" y="30" fill="#24292f">
+<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ Random Dev Quote ]---------------------------------------</tspan>
+<tspan x="20" y="60" class="value">&quot;Simplicity is the soul of efficiency.&quot;</tspan>
+<tspan x="20" y="94" class="key">                                                                - Austin Freeman</tspan>
+
+</text>
+</svg>

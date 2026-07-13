@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="800px" height="600px" font-size="16px">
+<style>
+@font-face {
+src: local('Consolas'), local('Consolas Bold');
+font-family: 'ConsolasFallback';
+font-display: swap;
+-webkit-size-adjust: 109%;
+size-adjust: 109%;
+}
+.key   {fill: #ffa657;}
+.value {fill: #a5d6ff;}
+.cc    {fill: #616e7f;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="800px" height="600px" fill="#161b22" rx="10" stroke="#616e7f" stroke-width="1"/>
+<text x="20" y="30" fill="#c9d1d9">
+<tspan x="20" y="30" class="key">mausam@github</tspan> <tspan class="cc">---[ About Me ]-----------------------------------------------</tspan>
+<tspan x="20" y="60" class="cc">. </tspan><tspan class="value">Tech-focused engineer passionate about building scalable, high-performance systems</tspan>
+<tspan x="20" y="82" class="cc">. </tspan><tspan class="value">and modern web experiences. I work across the stack — from crafting smooth,</tspan>
+<tspan x="20" y="104" class="cc">. </tspan><tspan class="value">interactive UIs using GSAP and modern frontend tools to designing robust backend</tspan>
+<tspan x="20" y="126" class="cc">. </tspan><tspan class="value">systems powered by Go, Node.js, PostgreSQL, and distributed architectures.</tspan>
+<tspan x="20" y="168" class="cc">. </tspan><tspan class="value">With strong foundations in system design, DBMS, and DevOps, I’ve built and</tspan>
+<tspan x="20" y="190" class="cc">. </tspan><tspan class="value">experimented with microservices, cloud deployments, and automation workflows that</tspan>
+<tspan x="20" y="212" class="cc">. </tspan><tspan class="value">solve real-world problems at scale. I’m particularly interested in AI/ML, backend</tspan>
+<tspan x="20" y="234" class="cc">. </tspan><tspan class="value">infrastructure, and intelligent systems, constantly exploring how these domains</tspan>
+<tspan x="20" y="256" class="cc">. </tspan><tspan class="value">intersect to create efficient and resilient products.</tspan>
+<tspan x="20" y="298" class="cc">. </tspan><tspan class="key">Technical Focus:</tspan>
+<tspan x="20" y="320" class="cc">. </tspan><tspan class="key"> • Full-Stack Development (React, Node.js, Tailwind)</tspan>
+<tspan x="20" y="342" class="cc">. </tspan><tspan class="key"> • Backend &amp; Distributed Systems (Go, Redis, Microservices)</tspan>
+<tspan x="20" y="364" class="cc">. </tspan><tspan class="key"> • Web Animations &amp; Modern UI (GSAP, Lenis)</tspan>
+<tspan x="20" y="386" class="cc">. </tspan><tspan class="key"> • AI/ML, NLP, Python</tspan>
+<tspan x="20" y="408" class="cc">. </tspan><tspan class="key"> • System Design &amp; Databases</tspan>
+<tspan x="20" y="450" class="cc">. </tspan><tspan class="value">Currently diving deeper into cloud computing (AWS/GCP), DevOps, and advanced</tspan>
+<tspan x="20" y="472" class="cc">. </tspan><tspan class="value">analytics, aiming to build production-grade systems that are scalable, efficient, and</tspan>
+<tspan x="20" y="494" class="cc">. </tspan><tspan class="value">reliable.</tspan>
+<tspan x="20" y="536" class="cc">. </tspan><tspan class="value">I enjoy hackathons, open-source, and experimental projects that push me beyond</tspan>
+<tspan x="20" y="558" class="cc">. </tspan><tspan class="value">comfort zones — combining creativity with solid engineering principles.</tspan>
+
+</text>
+</svg>
