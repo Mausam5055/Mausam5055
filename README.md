@@ -328,8 +328,8 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./hackatime_dark_v1.svg">
-    <img alt="Hackatime Stats" src="./hackatime_light_v1.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./hackatime_dark_v1.svg?v=2">
+    <img alt="Hackatime Stats" src="./hackatime_light_v1.svg?v=2">
   </picture>
 </div>
 
