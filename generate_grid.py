@@ -25,20 +25,23 @@ for s in skills + new_skills:
         all_skills.append(s)
 # Total is exactly 84 icons.
 
-lines = []
-# 12 icons per row keeps them a great size while being wide enough to occupy left/right spaces!
+lines = ['<table>']
+# 12 icons per row keeps them a great size while being wide enough to occupy left/right spaces on desktop!
+# Using an HTML table with fixed <td> widths forces horizontal scrolling on mobile, preventing shrinking!
 for i in range(0, len(all_skills), 12):
     row_skills = all_skills[i:i+12]
-    # Explicitly set width to keep them nicely sized
-    cells = [f'<img src="https://skillicons.dev/icons?i={s}&theme=dark" width="60" />' for s in row_skills]
-    # Pad just in case it doesn't divide evenly
-    while len(cells) < 12:
-        cells.append("&nbsp;")
-    lines.append("| " + " | ".join(cells) + " |")
+    lines.append("  <tr>")
+    for s in row_skills:
+        lines.append(f'    <td width="80" align="center">\n      <img src="https://skillicons.dev/icons?i={s}&theme=dark" width="60" />\n    </td>')
     
-    # After the first row, add the markdown header separator
-    if i == 0:
-        lines.append("|" + "|".join([":---:"] * 12) + "|")
+    # Pad just in case it doesn't divide evenly
+    while len(row_skills) < 12:
+        lines.append('    <td width="80" align="center">&nbsp;</td>')
+        row_skills.append("")
+    
+    lines.append("  </tr>")
+
+lines.append('</table>')
 
 table_str = "\n".join(lines)
 

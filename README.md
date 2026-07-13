@@ -33,14 +33,274 @@
 
 <div align="center">
 
-| <img src="https://skillicons.dev/icons?i=html&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=css&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=js&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=ts&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=react&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=threejs&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=p5js&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=express&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=vite&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" width="60" /> |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| <img src="https://skillicons.dev/icons?i=firebase&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=supabase&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=java&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=figma&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=obsidian&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=prisma&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=vue&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=python&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=spring&theme=dark" width="60" /> |
-| <img src="https://skillicons.dev/icons?i=solidjs&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=discord&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=gitlab&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=cs&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=angular&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=arduino&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=bash&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=bun&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=codepen&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=django&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=docker&theme=dark" width="60" /> |
-| <img src="https://skillicons.dev/icons?i=dotnet&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=flask&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=gcp&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=git&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=pinia&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=graphql&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=md&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=matlab&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=mui&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=netlify&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" width="60" /> |
-| <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=npm&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=opencv&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=r&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=ubuntu&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=aws&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=svelte&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=solidity&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=terraform&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=azure&theme=dark" width="60" /> |
-| <img src="https://skillicons.dev/icons?i=grafana&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=prometheus&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=linux&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=nginx&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=redis&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=kafka&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=notion&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=rust&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=go&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=cpp&theme=dark" width="60" /> |
-| <img src="https://skillicons.dev/icons?i=c&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=sass&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=powershell&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=github&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=windows&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=vim&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=postman&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=webpack&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=babel&theme=dark" width="60" /> | <img src="https://skillicons.dev/icons?i=jest&theme=dark" width="60" /> |
+<table>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=html&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=css&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=js&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=ts&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=react&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=threejs&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=p5js&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=express&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=vite&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=firebase&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=supabase&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=java&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=figma&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=obsidian&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=prisma&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=vue&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=python&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=spring&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=solidjs&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=discord&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=gitlab&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=cs&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=angular&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=arduino&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=bash&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=bun&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=codepen&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=django&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=docker&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=dotnet&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=flask&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=gcp&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=git&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=pinia&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=graphql&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=md&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=matlab&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=mui&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=netlify&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=npm&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=opencv&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=r&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=ubuntu&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=aws&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=svelte&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=solidity&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=terraform&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=azure&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=grafana&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=prometheus&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=linux&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=nginx&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=redis&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=kafka&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=notion&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=rust&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=go&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=cpp&theme=dark" width="60" />
+    </td>
+  </tr>
+  <tr>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=c&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=sass&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=powershell&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=github&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=windows&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=vim&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=postman&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=webpack&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=babel&theme=dark" width="60" />
+    </td>
+    <td width="80" align="center">
+      <img src="https://skillicons.dev/icons?i=jest&theme=dark" width="60" />
+    </td>
+  </tr>
+</table>
 
 > *Yes... I'm pretty comfortable with every language and library on this list.*
 
