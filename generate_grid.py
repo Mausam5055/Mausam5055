@@ -10,10 +10,11 @@ skills = [
     "npm", "postgres", "opencv", "r", "ubuntu", "aws", "svelte", "solidity", "tensorflow", "terraform"
 ]
 
-# New cloud, system design, and extra skills (21 icons)
+# New cloud, system design, and extra skills (21 icons). 
+# Pandas and Numpy were replaced with Sass and Powershell because they weren't loading.
 new_skills = [
     "azure", "grafana", "prometheus", "kubernetes", "linux", "nginx", "redis", "kafka", 
-    "sqlite", "notion", "rust", "go", "cpp", "c", "pandas", "numpy", "github", 
+    "sqlite", "notion", "rust", "go", "cpp", "c", "sass", "powershell", "github", 
     "cloudflare", "windows", "raspberrypi", "vim"
 ]
 
@@ -25,17 +26,18 @@ for s in skills + new_skills:
 # Total is exactly 80 icons.
 
 lines = []
-for i in range(0, len(all_skills), 10):
-    row_skills = all_skills[i:i+10]
+# Changed to 16 icons per row to stretch the table wider and occupy left/right spaces!
+for i in range(0, len(all_skills), 16):
+    row_skills = all_skills[i:i+16]
     cells = [f'<img src="https://skillicons.dev/icons?i={s}&theme=dark" />' for s in row_skills]
     # Pad just in case it doesn't divide evenly
-    while len(cells) < 10:
+    while len(cells) < 16:
         cells.append("&nbsp;")
     lines.append("| " + " | ".join(cells) + " |")
     
     # After the first row, add the markdown header separator
     if i == 0:
-        lines.append("|" + "|".join([":---:"] * 10) + "|")
+        lines.append("|" + "|".join([":---:"] * 16) + "|")
 
 table_str = "\n".join(lines)
 
