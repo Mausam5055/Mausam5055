@@ -36,40 +36,40 @@
 <table>
   <tr>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=html&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=html&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=css&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=css&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=js&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=js&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=ts&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=ts&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=react&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=react&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=threejs&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=threejs&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=p5js&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=p5js&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=express&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=express&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=vite&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=vite&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
     <td width="80" align="center">
-      <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" width="60" />
+      <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" width="60" /><br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>
     </td>
   </tr>
   <tr>

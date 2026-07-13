@@ -27,12 +27,15 @@ for s in skills + new_skills:
 
 lines = ['<table>']
 # 12 icons per row keeps them a great size while being wide enough to occupy left/right spaces on desktop!
-# Using an HTML table with fixed <td> widths forces horizontal scrolling on mobile, preventing shrinking!
+# Using an HTML table with a non-breaking space spacer forces horizontal scrolling on mobile, preventing shrinking!
 for i in range(0, len(all_skills), 12):
     row_skills = all_skills[i:i+12]
     lines.append("  <tr>")
     for s in row_skills:
-        lines.append(f'    <td width="80" align="center">\n      <img src="https://skillicons.dev/icons?i={s}&theme=dark" width="60" />\n    </td>')
+        # The ultimate hack to prevent GitHub from shrinking cells on mobile: 
+        # Add a string of non-breaking spaces in the very first row. This physically cannot shrink!
+        spacer = '<br><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub>' if i == 0 else ''
+        lines.append(f'    <td width="80" align="center">\n      <img src="https://skillicons.dev/icons?i={s}&theme=dark" width="60" />{spacer}\n    </td>')
     
     # Pad just in case it doesn't divide evenly
     while len(row_skills) < 12:
