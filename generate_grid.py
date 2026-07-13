@@ -1,6 +1,6 @@
 import re
 
-# Base skills from the previous version
+# Base skills from the previous version (59 unique)
 skills = [
     "html", "css", "js", "ts", "react", "threejs", "p5js", "express", "vite", "vercel",
     "tailwind", "bootstrap", "firebase", "supabase", "mysql", "java", "figma", "obsidian", "prisma", "vue",
@@ -10,7 +10,7 @@ skills = [
     "npm", "postgres", "opencv", "r", "ubuntu", "aws", "svelte", "solidity", "tensorflow", "terraform"
 ]
 
-# New cloud, system design, and extra skills (around 20)
+# New cloud, system design, and extra skills (21 icons)
 new_skills = [
     "azure", "grafana", "prometheus", "kubernetes", "linux", "nginx", "redis", "kafka", 
     "sqlite", "notion", "rust", "go", "cpp", "c", "pandas", "numpy", "github", 
@@ -22,11 +22,22 @@ all_skills = []
 for s in skills + new_skills:
     if s not in all_skills:
         all_skills.append(s)
+# Total is exactly 80 icons.
 
-# Create a single image URL using skillicons.dev with all icons
-icons_list = ",".join(all_skills)
-# Use perline=12 for a nice grid layout that fits well on GitHub profiles
-table_str = f'<a href="https://skillicons.dev">\n  <img src="https://skillicons.dev/icons?i={icons_list}&theme=dark&perline=12" />\n</a>'
+lines = []
+for i in range(0, len(all_skills), 10):
+    row_skills = all_skills[i:i+10]
+    cells = [f'<img src="https://skillicons.dev/icons?i={s}&theme=dark" />' for s in row_skills]
+    # Pad just in case it doesn't divide evenly
+    while len(cells) < 10:
+        cells.append("&nbsp;")
+    lines.append("| " + " | ".join(cells) + " |")
+    
+    # After the first row, add the markdown header separator
+    if i == 0:
+        lines.append("|" + "|".join([":---:"] * 10) + "|")
+
+table_str = "\n".join(lines)
 
 with open(r'd:\Mausam5055\README.md', 'r', encoding='utf-8') as f:
     content = f.read()
