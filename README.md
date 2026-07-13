@@ -335,8 +335,12 @@
 
 ### 📈 3D Contribution Graph
 
-| <div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg?v=4"><img alt="3D Contribution Graph" src="./profile-3d-contrib/profile-green-animate.svg?v=4"></picture></div> |
-| :---: |
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg?v=4">
+    <img alt="3D Contribution Graph" src="./profile-3d-contrib/profile-green-animate.svg?v=4">
+  </picture>
+</div>
 
 ### 🎨 **Connect With Me**
 
